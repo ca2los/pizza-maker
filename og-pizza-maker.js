@@ -1,8 +1,4 @@
 "use strict";
-// Pizza Maker
-// Give options to create a custom pizza
-// Create a new value with the new pizza
-// Calculate the total cost in dollars
 
 const DELIVERY_TIP = .12
 
