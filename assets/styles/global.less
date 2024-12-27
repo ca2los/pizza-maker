@@ -4,7 +4,33 @@
     padding: 0;
 }
 
+:root {
+    --font-family: "Space Mono", serif;
+    --font-size-1: 3.0rem;
+    --font-size-2: 2.2rem;
+    --font-size-3: 1.8rem;
+    --font-size-4: 1.4rem;
+    --font-size-5: 1.2rem;
+    --font-size-6: 1.0rem;
+    --color-white: #ffffff;
+    --color-softy: #f3f3f3;
+    --color-black: #000000;
+    --color-purps: #3b00ee;
+    --color-blues: #0063ff;
+    --color-sunny: #ffe983;
+}
 
+p, h1, h2, h3, h4, h5, h6, ul, ol, span, button, a, blockquote {
+    font-family: var(--font-family);
+}
+
+a {
+    color: var(--col-black);
+    transition: all .5s linear;
+    &:hover {
+        transition: all .5s linear;
+    }
+}
 
 // Global Modules
 .gh-navbar {
