@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 :root {
@@ -44,8 +44,47 @@ a:hover {
 .gh-navbar {
   width: 90%;
   max-width: 700px;
+  border: 1px solid #000000;
+  border-radius: 6px;
+  box-shadow: 0 5px 5px #0000001f;
+  left: 0;
   padding: 15px;
   position: fixed;
+  right: 0;
+  top: 20px;
   z-index: 1;
+}
+.gh-navbar ul {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+footer {
+  border-top: 1px solid #000;
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+}
+footer ul {
+  align-items: center;
+  display: flex;
+  list-style: none;
+}
+footer ul.left {
+  justify-content: left;
+}
+footer ul.right {
+  justify-content: right;
+}
+footer ul li {
+  padding: 0;
+  margin: 0 60px 0 0;
+}
+footer ul li a {
+  text-decoration: none;
+}
+main {
+  margin-top: 100px;
 }
 /*# sourceMappingURL=global.css.map */

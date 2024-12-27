@@ -1,4 +1,8 @@
-header {
+.pizza-maker {
+  margin-left: auto;
+  margin-right: auto;
+}
+.pizza-maker header {
   width: 100%;
 }
 /*# sourceMappingURL=pizza-maker.css.map */
