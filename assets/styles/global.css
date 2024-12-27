@@ -12,7 +12,7 @@
   --font-size-5: 1.2rem;
   --font-size-6: 1rem;
   --color-white: #ffffff;
-  --color-softy: #f3f3f3;
+  --color-softy: #939393;
   --color-black: #000000;
   --color-purps: #3b00ee;
   --color-blues: #0063ff;
@@ -35,7 +35,7 @@ blockquote {
   font-family: var(--font-family);
 }
 a {
-  color: var(--col-black);
+  color: var(--color-black);
   transition: all 0.5s linear;
 }
 a:hover {
@@ -44,7 +44,8 @@ a:hover {
 .gh-navbar {
   width: 90%;
   max-width: 700px;
-  border: 1px solid #000000;
+  background: var(--color-white);
+  border: 1px solid var(--color-black);
   border-radius: 6px;
   box-shadow: 0 5px 5px #0000001f;
   left: 0;
@@ -52,6 +53,7 @@ a:hover {
   position: fixed;
   right: 0;
   top: 20px;
+  transition: all 0.5s linear;
   z-index: 1;
 }
 .gh-navbar ul {
@@ -60,8 +62,24 @@ a:hover {
   justify-content: center;
   list-style: none;
 }
+.gh-navbar ul li a {
+  border-bottom: 1px solid var(--color-black);
+  text-decoration: none;
+}
+.gh-navbar ul li a:hover {
+  border-bottom: 1px solid var(--color-white);
+  color: var(--color-softy);
+}
+.gh-navbar ul li a.github,
+.gh-navbar ul li a.threads {
+  border-bottom: 0;
+}
+.gh-navbar:hover {
+  box-shadow: none;
+  transition: all 0.5s linear;
+}
 footer {
-  border-top: 1px solid #000;
+  border-top: 1px solid var(--color-black);
   display: flex;
   padding: 20px;
   justify-content: space-between;
@@ -83,6 +101,9 @@ footer ul li {
 }
 footer ul li a {
   text-decoration: none;
+}
+footer ul li a:hover {
+  color: var(--color-softy);
 }
 main {
   margin-top: 100px;
