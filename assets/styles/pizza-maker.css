@@ -17,6 +17,7 @@
   font-weight: 400;
   font-size: var(--font-size-3);
   font-style: normal;
+  margin-top: 15px;
 }
 .pizza-maker header p {
   margin-top: 15px;
