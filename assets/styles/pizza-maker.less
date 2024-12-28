@@ -3,12 +3,53 @@
     margin-left: auto;
     margin-right: auto;
     header {
-        width: 100%;
-
+        width: 90%;
+        max-width: 980px;
+        margin: 0 auto 60px;
+        text-align: center;
+        h1 {
+            font-size: var(--font-size-1);
+            line-height: 1;
+        }
+        h2 {
+            font-family: "Bungee Tint", serif;
+            font-weight: 400;
+            font-size: var(--font-size-3);
+            font-style: normal;
+        }
+        p {
+            margin-top: 15px;
+        }
     }
     section {
         &.pm-intro {}
         &.pm-tool {}
         &.gh-card {}
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .pizza-maker {
+        header {
+            h1 {
+                font-size: var(--font-size-2);
+            }
+            h2 {
+                font-size: var(--font-size-4);
+                margin-top: 5px;
+            }
+            p {
+                margin-top: 15px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 360px) {
+    .pizza-maker {
+        header {
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
     }
 }

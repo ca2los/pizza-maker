@@ -5,9 +5,9 @@
 }
 :root {
   --font-family: "Space Mono", serif;
-  --font-size-1: 3rem;
-  --font-size-2: 2.2rem;
-  --font-size-3: 1.8rem;
+  --font-size-1: 4rem;
+  --font-size-2: 3rem;
+  --font-size-3: 1.7rem;
   --font-size-4: 1.4rem;
   --font-size-5: 1.2rem;
   --font-size-6: 1rem;
@@ -39,7 +39,7 @@ a {
   transition: all 0.5s linear;
 }
 a:hover {
-  transition: all 0.5s linear;
+  transition: all 0.3s linear;
 }
 .gh-navbar {
   width: 90%;
@@ -73,6 +73,12 @@ a:hover {
 .gh-navbar ul li a.github,
 .gh-navbar ul li a.threads {
   border-bottom: 0;
+  display: flex;
+}
+.gh-navbar ul li a.project img,
+.gh-navbar ul li a.repositories img,
+.gh-navbar ul li a.contact img {
+  display: none;
 }
 .gh-navbar:hover {
   box-shadow: none;
@@ -95,17 +101,75 @@ footer ul.left {
 footer ul.right {
   justify-content: right;
 }
+footer ul.right li {
+  margin-right: 0;
+}
 footer ul li {
   padding: 0;
   margin: 0 60px 0 0;
 }
 footer ul li a {
+  display: flex;
   text-decoration: none;
+}
+footer ul li a img {
+  margin-right: 10px;
+}
+footer ul li a.license img,
+footer ul li a.repositories img,
+footer ul li a.contact img {
+  display: none;
 }
 footer ul li a:hover {
   color: var(--color-softy);
 }
 main {
   margin-top: 100px;
+}
+@media only screen and (max-width: 1110px) {
+  footer {
+    flex-wrap: wrap;
+  }
+  footer ul.left,
+  footer ul.right {
+    width: 100%;
+    justify-content: center;
+  }
+  footer ul.right {
+    margin-top: 20px;
+  }
+  footer ul.right li {
+    font-size: 0.8rem;
+    margin-right: inherit;
+  }
+  footer ul li {
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .gh-navbar ul li a.project,
+  .gh-navbar ul li a.repositories,
+  .gh-navbar ul li a.contact {
+    border-bottom: 0;
+    display: flex;
+    font-size: 0;
+    transition: none;
+  }
+  .gh-navbar ul li a.project img,
+  .gh-navbar ul li a.repositories img,
+  .gh-navbar ul li a.contact img {
+    display: block;
+  }
+  footer ul li a.license,
+  footer ul li a.repositories,
+  footer ul li a.contact {
+    font-size: 0;
+    transition: none;
+  }
+  footer ul li a.license img,
+  footer ul li a.repositories img,
+  footer ul li a.contact img {
+    display: block;
+  }
 }
 /*# sourceMappingURL=global.css.map */
