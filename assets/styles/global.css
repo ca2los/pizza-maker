@@ -30,7 +30,11 @@ ol,
 span,
 button,
 a,
-blockquote {
+blockquote,
+form,
+input,
+select,
+textarea {
   color: var(--color-black);
   font-family: var(--font-family);
 }
