@@ -38,11 +38,13 @@ textarea {
   color: var(--color-black);
   font-family: var(--font-family);
 }
-a {
+a,
+button {
   color: var(--color-black);
   transition: all 0.5s linear;
 }
-a:hover {
+a:hover,
+button:hover {
   transition: all 0.3s linear;
 }
 .gh-navbar {

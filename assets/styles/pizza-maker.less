@@ -26,10 +26,15 @@
         max-width: 980px;
         margin: 0 auto;
         text-align: center;
+        &.pm-wrapper {
+                margin-bottom: 60px;
+            #pizza-form {
+            }
+        }
         &#pm-output {
             max-width: 600px;
             background: #ffffff;
-            border: 1px solid #c1c1c1;
+            border: 1px dotted #c1c1c1;
             border-radius: 6px;
             display: none;
             margin-top: 40px;
@@ -42,8 +47,24 @@
                 font-weight: 400;
             }
             button {
-                width: 60px;
-                height: 24px;
+                width: 28px;
+                height: 28px;
+                border: 0;
+                border-radius: 100%;
+                cursor: pointer;
+                margin: 10px 5px;
+                &[type="reset"] {
+                    background: url("../images/unavailable-stroke.svg") no-repeat center;
+                    &:hover {
+                        background: var(--color-softy) url("../images/unavailable-stroke.svg") no-repeat center;
+                    }
+                }
+                &[type="button"] {
+                    background: url("../images/checkmark-stroke.svg") no-repeat center;
+                    &:hover {
+                        background: var(--color-softy) url("../images/checkmark-stroke.svg") no-repeat center;
+                    }
+                }
             }
         }
     }
