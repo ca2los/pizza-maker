@@ -11,11 +11,12 @@
   --font-size-4: 1.4rem;
   --font-size-5: 1.2rem;
   --font-size-6: 1rem;
-  --color-white: #ffffff;
-  --color-softy: #939393;
   --color-black: #000000;
-  --color-purps: #3b00ee;
+  --color-white: #ffffff;
   --color-blues: #0063ff;
+  --color-purps: #3b00ee;
+  --color-rally: #c90a01;
+  --color-softy: #939393;
   --color-sunny: #ffe983;
 }
 p,
@@ -46,6 +47,12 @@ button {
 a:hover,
 button:hover {
   transition: all 0.3s linear;
+}
+button,
+input {
+  border: 1px solid var(--color-black);
+  border-radius: 6px;
+  cursor: pointer;
 }
 .gh-navbar {
   width: 90%;
