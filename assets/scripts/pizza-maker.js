@@ -4,6 +4,13 @@
 
 function pizzaMenu() {
     // Select Pizza
+    let node1 = document.createElement('h2')
+    // Hide & Display
+    document.getElementById('pizza-form').style.display = 'none'
+    document.getElementById('pm-menu').style.display = 'block'
+    // Apppend Objects
+    document.getElementById('pm-menu').appendChild(node1).textContent = "Select your pizza"
+
 }
 
 function checkUsername(reviewName, reviewTel) {
@@ -13,8 +20,9 @@ function checkUsername(reviewName, reviewTel) {
     let node3 = document.createElement('p')
     let node4 = document.createElement('button')
     let node5 = document.createElement('button')
-    // Append Objects
+    // Display Object
     document.getElementById('pm-output').style.display = 'block'
+    // Append Objects
     document.getElementById('pm-output').appendChild(node1).textContent = reviewName
     document.getElementById('pm-output').appendChild(node2).textContent = reviewTel
     document.getElementById('pm-output').appendChild(node3).textContent = "Do you want to proceed?"
@@ -22,7 +30,7 @@ function checkUsername(reviewName, reviewTel) {
     document.getElementById('pm-output').appendChild(node5).setAttribute('type','button')
     // Listen OnClick
     document.querySelector('button[type="reset"]').onclick = function(){location.reload();}
-    document.querySelector('button[type="submit"]').onclick = pizzaMenu()
+    document.querySelector('button[type="button"]').addEventListener('click', pizzaMenu)
 }
 
 function pizzaCustomer() {
