@@ -8,7 +8,7 @@ function pizzaMenu() {
     // Hide & Display
     document.getElementById('pizza-form').style.display = 'none'
     document.getElementById('pm-menu').style.display = 'block'
-    // Apppend Objects
+    // Append Objects
     document.getElementById('pm-menu').appendChild(node1).textContent = "Select your pizza"
 
 }
@@ -39,3 +39,7 @@ function pizzaCustomer() {
     let phoneSubmit = document.getElementById("pm-tel").value;
     checkUsername(nameSubmit, phoneSubmit);
 }
+
+// ToDo
+// Append createElements into an object
+// Make pizzaMenu work
