@@ -10,7 +10,6 @@ function pizzaMenu() {
     document.getElementById('pm-menu').style.display = 'block'
     // Append Objects
     document.getElementById('pm-menu').appendChild(node1).textContent = "Select your pizza"
-
 }
 
 function checkUsername(reviewName, reviewTel) {
