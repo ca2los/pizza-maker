@@ -14,6 +14,9 @@ const HTML_ITEMS = [
 function pizzaMenu() {
     // Hide & Display
     document.getElementById('pizza-form').style.display = 'none'
+    document.getElementById('pm-output').children[2].style.display = 'none'
+    document.getElementById('pm-output').children[3].style.display = 'none'
+    document.getElementById('pm-output').children[4].style.display = 'none'
     document.getElementById('pm-menu').style.display = 'block'
     // Append Objects
     document.getElementById('pm-menu').appendChild(HTML_ITEMS[0]).textContent = "Select your pizza"
@@ -48,3 +51,5 @@ function pizzaCustomer() {
 
 // ToDo
 // Pass the reviewName and reviewTel values into pizzaMenu()
+// Create the pizza menu HTML modules
+// Think of an alternative for hiding modules
