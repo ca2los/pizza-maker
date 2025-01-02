@@ -26,11 +26,17 @@ function checkUsername(reviewName, reviewTel) {
     document.getElementById('pm-output').appendChild(HTML_ITEMS[1]).textContent = reviewName
     document.getElementById('pm-output').appendChild(HTML_ITEMS[2]).textContent = reviewTel
     document.getElementById('pm-output').appendChild(HTML_ITEMS[3]).textContent = "Do you want to proceed?"
-    document.getElementById('pm-output').appendChild(HTML_ITEMS[4]).setAttribute('type','reset')
-    document.getElementById('pm-output').appendChild(HTML_ITEMS[5]).setAttribute('type','button')
-    // Listen OnClick
-    document.querySelector('button[type="reset"]').onclick = function(){location.reload()}
-    document.querySelector('button[type="button"]').addEventListener('click', pizzaMenu)
+    document.getElementById('pm-output').appendChild(HTML_ITEMS[4])
+    document.getElementById('pm-output').appendChild(HTML_ITEMS[5])
+    // On Click
+    Object.assign(HTML_ITEMS[4], {
+        onclick: function () {location.reload()},
+        type: 'reset'
+    })
+    Object.assign(HTML_ITEMS[5], {
+        onclick: pizzaMenu,
+        type: 'button'
+    })
 }
 
 function pizzaCustomer() {
@@ -41,4 +47,4 @@ function pizzaCustomer() {
 }
 
 // ToDo
-// Make pizzaMenu() work
+// Pass the reviewName and reviewTel values into pizzaMenu()
