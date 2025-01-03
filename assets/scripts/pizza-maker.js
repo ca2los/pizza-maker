@@ -20,6 +20,8 @@ function pizzaMenu() {
     document.getElementById('pizza-form').style.display = 'none'
     document.getElementById('pm-validate').style.display = 'none'
     document.getElementById('pm-menu').style.display = 'block'
+    // Conditional
+    document.querySelector('.btn-wrapper').style.display = 'block'
 }
 
 function checkUsername(reviewName, reviewTel) {
@@ -53,6 +55,7 @@ function pizzaCustomer() {
 }
 
 // ToDo
-// Create the pizza menu HTML modules
-// Think of an alternative for hiding modules
+// Display the data retrieved in checkout()
+// Create the pizza menu HTML modules in #pm-menu
+// If the pizza has been selected, then display the 'Cancel' and 'Confirm' buttons.
 // Build a guide to JS DOM API commands

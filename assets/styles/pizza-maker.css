@@ -79,6 +79,9 @@
 .pizza-maker section#pm-menu {
   display: none;
 }
+.pizza-maker section#pm-menu h3 .pizza-options .btn-wrapper {
+  display: none;
+}
 @media only screen and (max-width: 769px) {
   .pizza-maker header {
     margin: 0 auto 40px;
