@@ -55,6 +55,7 @@ function pizzaCustomer() {
 }
 
 // ToDo
+// Male & Female
 // Display the data retrieved in checkout()
 // Create the pizza menu HTML modules in #pm-menu
 // Retrieve the selected values
