@@ -53,3 +53,4 @@ function pizzaCustomer() {
 // Pass the reviewName and reviewTel values into pizzaMenu()
 // Create the pizza menu HTML modules
 // Think of an alternative for hiding modules
+// Build a guide to JS DOM API commands
