@@ -49,7 +49,7 @@
             <header>
                 <h1>Pizza Maker</h1>
                 <h2>By ca2los</h2>
-                <p>This program is a simulation of a tool that retrieves inputs and return an output as a checkout order. The idea is to practice essential concepts such as Statements, Expressions, Conditionals, Functions, Loops, Objects, and the DOM interaction.</p>
+                <p>This program is a simulation of a tool that retrieves inputs and return outputs to simulate a checkout order. The idea is to practice essential concepts such as Statements, Expressions, Conditionals, Functions, Loops, Objects, and the DOM interaction.</p>
             </header>
             <section class="pm-intro">
                 <form id="pizza-form">
@@ -60,14 +60,19 @@
                     <button type="button" onclick="pizzaCustomer()">Submit</button>
                 </form>
             </section>
-            <section id="pm-validate"></section>
+            <section id="pm-validate">
+                <div id="table-wrapper">
+
+                </div>
+            </section>
             <section id="pm-menu">
                 <h3>Select the pizza of your choice:</h3>
                 <div class="pizza-options">
-                    <div class="btn-wrapper">
-                        <button type="button" onclick="checkout()">Submit</button>
-                        <button type="button" onclick="location.reload()">Cancel</button>
-                    </div>
+
+                </div>
+                <div class="btn-wrapper">
+                    <button type="button" onclick="location.reload()">Cancel</button>
+                    <button type="button" onclick="checkout()">Submit</button>
                 </div>
             </section>
 

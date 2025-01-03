@@ -28,15 +28,15 @@ function checkUsername(reviewName, reviewTel) {
     // Display Object
     document.getElementById('pm-validate').style.display = 'block'
     // Append Objects
-    document.getElementById('pm-validate').appendChild(HTML_ITEMS[1]).textContent = reviewName
-    document.getElementById('pm-validate').appendChild(HTML_ITEMS[2]).textContent = reviewTel
-    document.getElementById('pm-validate').appendChild(HTML_ITEMS[3]).textContent = "Ready to proceed with the menu?"
-    document.getElementById('pm-validate').appendChild(HTML_ITEMS[4]).textContent = "Cancel"
-    document.getElementById('pm-validate').appendChild(HTML_ITEMS[5]).textContent = "Continue"
+    document.getElementById('pm-validate').children[0].appendChild(HTML_ITEMS[1]).textContent = reviewName
+    document.getElementById('pm-validate').children[0].appendChild(HTML_ITEMS[2]).textContent = reviewTel
+    document.getElementById('pm-validate').children[0].appendChild(HTML_ITEMS[3]).textContent = "Ready to proceed with the menu?"
+    document.getElementById('pm-validate').children[0].appendChild(HTML_ITEMS[4]).textContent = "Cancel"
+    document.getElementById('pm-validate').children[0].appendChild(HTML_ITEMS[5]).textContent = "Continue"
     // On Click
     Object.assign(HTML_ITEMS[4], {
         className: 'cancel',
-        onclick: function () {location.reload()},
+        onclick: function() {location.reload()},
         type: 'reset'
     })
     Object.assign(HTML_ITEMS[5], {
@@ -57,5 +57,8 @@ function pizzaCustomer() {
 // ToDo
 // Display the data retrieved in checkout()
 // Create the pizza menu HTML modules in #pm-menu
+// Retrieve the selected values
 // If the pizza has been selected, then display the 'Cancel' and 'Confirm' buttons.
-// Build a guide to JS DOM API commands
+// For future projects: Build a guide to JS DOM API commands
+// For future projects: Seed data into the JS project (simulate a database)
+// Gran Turismo configurator

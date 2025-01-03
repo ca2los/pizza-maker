@@ -5,7 +5,7 @@
 .pizza-maker header {
   width: 90%;
   max-width: 980px;
-  margin: 0 auto 60px;
+  margin: 0 auto 50px;
   text-align: center;
 }
 .pizza-maker header h1 {
@@ -51,35 +51,45 @@
 .pizza-maker section#pm-validate {
   width: 90%;
   max-width: 600px;
-  background: #ffffff;
-  border: 1px dotted #c1c1c1;
+  background: #000000;
   border-radius: 6px;
   display: none;
-  margin-top: 40px;
   margin-bottom: 50px;
   padding: 20px;
 }
-.pizza-maker section#pm-validate h3 {
+.pizza-maker section#pm-validate #table-wrapper {
+  border: 1px solid #939393;
+}
+.pizza-maker section#pm-validate #table-wrapper h3 {
+  color: var(--color-white);
+  padding-top: 10px;
   text-transform: uppercase;
 }
-.pizza-maker section#pm-validate h4 {
+.pizza-maker section#pm-validate #table-wrapper h4 {
+  color: var(--color-softy);
   font-weight: 400;
+  padding-bottom: 10px;
 }
-.pizza-maker section#pm-validate button {
+.pizza-maker section#pm-validate #table-wrapper p {
+  border-top: 1px solid #939393;
+  color: var(--color-white);
+  padding-top: 10px;
+}
+.pizza-maker section#pm-validate #table-wrapper button {
   width: 100px;
   height: 30px;
   border: 1px solid var(--color-black);
-  margin: 10px 5px;
+  margin: 10px 5px 15px;
   text-transform: uppercase;
 }
-.pizza-maker section#pm-validate button:hover {
+.pizza-maker section#pm-validate #table-wrapper button:hover {
   background: var(--color-rally);
   color: var(--color-white);
 }
 .pizza-maker section#pm-menu {
   display: none;
 }
-.pizza-maker section#pm-menu h3 .pizza-options .btn-wrapper {
+.pizza-maker section#pm-menu .btn-wrapper {
   display: none;
 }
 @media only screen and (max-width: 769px) {
