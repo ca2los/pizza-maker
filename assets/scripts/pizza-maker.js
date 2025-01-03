@@ -51,7 +51,11 @@ function pizzaCustomer() {
     // Retrieve Input Data
     let nameSubmit = document.getElementById("pm-name").value;
     let phoneSubmit = document.getElementById("pm-tel").value;
-    checkUsername(nameSubmit, phoneSubmit);
+    if (nameSubmit === "" || phoneSubmit === "" || nameSubmit === /^[a-zA-Z]/ || phoneSubmit === /^[0-9]/) {
+        alert('Please your name and phone number')
+    } else {
+        checkUsername(nameSubmit, phoneSubmit);
+    }
 }
 
 // ToDo
