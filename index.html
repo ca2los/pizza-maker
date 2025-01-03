@@ -51,6 +51,7 @@
                 <h2>By ca2los</h2>
                 <p>This program is a simulation of a tool that retrieves inputs and return outputs to simulate a checkout order. The idea is to practice essential concepts such as Statements, Expressions, Conditionals, Functions, Loops, Objects, and the DOM interaction.</p>
             </header>
+            <!-- Name and Contact -->
             <section class="pm-intro">
                 <form id="pizza-form">
                     <label for="pm-name">Order for:</label>
@@ -60,22 +61,71 @@
                     <button type="button" onclick="pizzaCustomer()">Submit</button>
                 </form>
             </section>
+            <!-- Validate Data -->
             <section id="pm-validate">
-                <div id="table-wrapper">
-
-                </div>
+                <div id="table-wrapper"></div>
             </section>
+            <!-- Pizza Menu -->
             <section id="pm-menu">
-                <h3>Select the pizza of your choice:</h3>
-                <div class="pizza-options">
-
-                </div>
+                <h2>Select the pizza of your choice:</h2>
+                <ul class="pizza-options">
+                    <li>
+                        <a id="cheese" class="pizza">
+                            <div class="pizza-image">
+                                <img src="./assets/images/pizza-style.svg" alt="Pizza Image">
+                            </div>
+                            <div class="pizza-details">
+                                <h3>Cheese Pizza</h3>
+                                <p>Pizza dough, pizza sauce, mozzarella cheese, parmesan, and garlic.</p>
+                                <p><span>USD $12.99</span></p>
+                                <button type="button" onclick="pizzaCustomer()">Select</button>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="italian" class="pizza">
+                            <div class="pizza-image">
+                                <img src="./assets/images/pizza-style.svg" alt="Pizza Image">
+                            </div>
+                            <div class="pizza-details">
+                                <h3>Italian Pizza</h3>
+                                <p>Smoked mozzarella cheese, meatballs, caramelized onions, and basil.</p>
+                                <p><span>USD $15.99</span></p>
+                                <button type="button" onclick="pizzaCustomer()">Select</button>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="mexican" class="pizza">
+                            <div class="pizza-image">
+                                <img src="./assets/images/pizza-style.svg" alt="Pizza Image">
+                            </div>
+                            <div class="pizza-details">
+                                <h3>Mexican Pizza</h3>
+                                <p>Fried flour tortillas, refried beans, ground beef, cheese, and taco sauce.</p>
+                                <p><span>USD $13.99</span></p>
+                                <button type="button" onclick="pizzaCustomer()">Select</button>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="pepperoni" class="pizza">
+                            <div class="pizza-image">
+                                <img src="./assets/images/pizza-style.svg" alt="Pizza Image">
+                            </div>
+                            <div class="pizza-details">
+                                <h3>Pepperoni Pizza</h3>
+                                <p>A great crust, gooey cheese, caramelized onions, and tons of prime pepperoni.</p>
+                                <p><span>USD $16.99</span></p>
+                                <button type="button" onclick="pizzaCustomer()">Select</button>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
                 <div class="btn-wrapper">
-                    <button type="button" onclick="location.reload()">Cancel</button>
-                    <button type="button" onclick="checkout()">Submit</button>
+                    <button type="button" onclick="location.reload()">Cancel order</button>
                 </div>
             </section>
-
         </main>
         <footer>
             <ul class="left">
