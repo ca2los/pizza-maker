@@ -11,35 +11,38 @@ const HTML_ITEMS = [
     document.createElement('button')
 ]
 
+function checkout(reviewName, reviewTel) {
+    console.log(reviewName, reviewTel)
+}
+
 function pizzaMenu() {
     // Hide & Display
     document.getElementById('pizza-form').style.display = 'none'
-    document.getElementById('pm-output').children[2].style.display = 'none'
-    document.getElementById('pm-output').children[3].style.display = 'none'
-    document.getElementById('pm-output').children[4].style.display = 'none'
+    document.getElementById('pm-validate').style.display = 'none'
     document.getElementById('pm-menu').style.display = 'block'
-    // Append Objects
-    document.getElementById('pm-menu').appendChild(HTML_ITEMS[0]).textContent = "Select your pizza"
 }
 
 function checkUsername(reviewName, reviewTel) {
     // Display Object
-    document.getElementById('pm-output').style.display = 'block'
+    document.getElementById('pm-validate').style.display = 'block'
     // Append Objects
-    document.getElementById('pm-output').appendChild(HTML_ITEMS[1]).textContent = reviewName
-    document.getElementById('pm-output').appendChild(HTML_ITEMS[2]).textContent = reviewTel
-    document.getElementById('pm-output').appendChild(HTML_ITEMS[3]).textContent = "Do you want to proceed?"
-    document.getElementById('pm-output').appendChild(HTML_ITEMS[4])
-    document.getElementById('pm-output').appendChild(HTML_ITEMS[5])
+    document.getElementById('pm-validate').appendChild(HTML_ITEMS[1]).textContent = reviewName
+    document.getElementById('pm-validate').appendChild(HTML_ITEMS[2]).textContent = reviewTel
+    document.getElementById('pm-validate').appendChild(HTML_ITEMS[3]).textContent = "Ready to proceed with the menu?"
+    document.getElementById('pm-validate').appendChild(HTML_ITEMS[4]).textContent = "Cancel"
+    document.getElementById('pm-validate').appendChild(HTML_ITEMS[5]).textContent = "Continue"
     // On Click
     Object.assign(HTML_ITEMS[4], {
+        className: 'cancel',
         onclick: function () {location.reload()},
         type: 'reset'
     })
     Object.assign(HTML_ITEMS[5], {
+        className: 'continue',
         onclick: pizzaMenu,
         type: 'button'
     })
+    checkout(reviewName, reviewTel)
 }
 
 function pizzaCustomer() {
@@ -50,7 +53,6 @@ function pizzaCustomer() {
 }
 
 // ToDo
-// Pass the reviewName and reviewTel values into pizzaMenu()
 // Create the pizza menu HTML modules
 // Think of an alternative for hiding modules
 // Build a guide to JS DOM API commands

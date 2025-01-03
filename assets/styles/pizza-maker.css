@@ -48,7 +48,7 @@
 .pizza-maker section.pm-intro #pizza-form button:hover {
   background: var(--color-rally);
 }
-.pizza-maker section#pm-output {
+.pizza-maker section#pm-validate {
   width: 90%;
   max-width: 600px;
   background: #ffffff;
@@ -59,30 +59,22 @@
   margin-bottom: 50px;
   padding: 20px;
 }
-.pizza-maker section#pm-output h3 {
+.pizza-maker section#pm-validate h3 {
   text-transform: uppercase;
 }
-.pizza-maker section#pm-output h4 {
+.pizza-maker section#pm-validate h4 {
   font-weight: 400;
 }
-.pizza-maker section#pm-output button {
-  width: 28px;
-  height: 28px;
-  border: 0;
-  border-radius: 100%;
+.pizza-maker section#pm-validate button {
+  width: 100px;
+  height: 30px;
+  border: 1px solid var(--color-black);
   margin: 10px 5px;
+  text-transform: uppercase;
 }
-.pizza-maker section#pm-output button[type="reset"] {
-  background: url("../images/unavailable-stroke.svg") no-repeat center;
-}
-.pizza-maker section#pm-output button[type="reset"]:hover {
-  background: var(--color-softy) url("../images/unavailable-stroke.svg") no-repeat center;
-}
-.pizza-maker section#pm-output button[type="button"] {
-  background: url("../images/checkmark-stroke.svg") no-repeat center;
-}
-.pizza-maker section#pm-output button[type="button"]:hover {
-  background: var(--color-softy) url("../images/checkmark-stroke.svg") no-repeat center;
+.pizza-maker section#pm-validate button:hover {
+  background: var(--color-rally);
+  color: var(--color-white);
 }
 .pizza-maker section#pm-menu {
   display: none;

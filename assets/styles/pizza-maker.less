@@ -48,7 +48,7 @@
                 }
             }
         }
-        &#pm-output {
+        &#pm-validate {
             width: 90%;
             max-width: 600px;
             background: #ffffff;
@@ -65,22 +65,14 @@
                 font-weight: 400;
             }
             button {
-                width: 28px;
-                height: 28px;
-                border: 0;
-                border-radius: 100%;
+                width: 100px;
+                height: 30px;
+                border: 1px solid var(--color-black);
                 margin: 10px 5px;
-                &[type="reset"] {
-                    background: url("../images/unavailable-stroke.svg") no-repeat center;
-                    &:hover {
-                        background: var(--color-softy) url("../images/unavailable-stroke.svg") no-repeat center;
-                    }
-                }
-                &[type="button"] {
-                    background: url("../images/checkmark-stroke.svg") no-repeat center;
-                    &:hover {
-                        background: var(--color-softy) url("../images/checkmark-stroke.svg") no-repeat center;
-                    }
+                text-transform: uppercase;
+                &:hover {
+                    background: var(--color-rally);
+                    color: var(--color-white);
                 }
             }
         }
