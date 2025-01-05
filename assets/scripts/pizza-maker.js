@@ -71,4 +71,4 @@ function pizzaCustomer() {
 // If the pizza has been selected, then display the 'Cancel' and 'Confirm' buttons.
 // For future projects: Build a guide to JS DOM API commands
 // For future projects: Seed data into the JS project (simulate a database)
-// Gran Turismo configurator
+// For future projects: Gran Turismo configurator
