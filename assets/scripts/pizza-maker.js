@@ -12,10 +12,14 @@ const HTML_ITEMS = [
 ]
 
 function checkout(reviewName, reviewTel) {
-    console.log(reviewName, reviewTel)
+    document.getElementById('pm-ticket').appendChild(HTML_ITEMS[2]).textContent = "Your order"
+    document.getElementById('pm-ticket').appendChild(HTML_ITEMS[0]).textContent = reviewName
+    document.getElementById('pm-ticket').appendChild(HTML_ITEMS[1]).textContent = reviewTel
 }
 
-function pizzaMenu() {
+function pizzaMenu(reviewName, reviewTel) {
+    // Display Ticket
+    checkout(reviewName, reviewTel)
     // Hide & Display
     document.getElementById('pizza-form').style.display = 'none'
     document.getElementById('pm-validate').style.display = 'none'
@@ -41,18 +45,17 @@ function checkUsername(reviewName, reviewTel) {
     })
     Object.assign(HTML_ITEMS[5], {
         className: 'continue',
-        onclick: pizzaMenu,
+        onclick: () => pizzaMenu(reviewName, reviewTel),
         type: 'button'
     })
-    checkout(reviewName, reviewTel)
 }
 
 function pizzaCustomer() {
     // Retrieve Input Data
     let nameSubmit = document.getElementById("pm-name").value;
     let phoneSubmit = document.getElementById("pm-tel").value;
-    if (nameSubmit === "" || phoneSubmit === "" || nameSubmit === /^[a-zA-Z]/ || phoneSubmit === /^[0-9]/) {
-        alert('Please your name and phone number')
+    if (nameSubmit === "" || phoneSubmit === "" /*|| nameSubmit !== /[a-zA-Z]/ || phoneSubmit !== /[0-9]/*/ ) {
+        alert('Please enter your name and phone number')
         location.reload()
     } else {
         checkUsername(nameSubmit, phoneSubmit);
@@ -60,6 +63,7 @@ function pizzaCustomer() {
 }
 
 // ToDo
+// Arrow Functions
 // Male & Female
 // Display the data retrieved in checkout()
 // Create the pizza menu HTML modules in #pm-menu

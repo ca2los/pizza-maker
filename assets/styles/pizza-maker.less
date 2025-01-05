@@ -105,12 +105,13 @@
                 }
             }
             .pm-menu-wrapper {
-                align-items: center;
+                align-items: flex-start;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
+                margin-top: 30px;
                 padding: 0 20px;
-                #ticket {
+                .ticket-preview {
                     width: 28%;
                     background: var(--color-black);
                     border-radius: 6px;
@@ -118,7 +119,27 @@
                     padding: 20px;
                     .ticket-preview-wrapper {
                         border: 1px solid var(--color-softy);
-                        color: var(--color-white);
+                        h2 {
+                            border-top: 1px solid var(--color-softy);
+                            color: var(--color-white);
+                            padding-top: 6px;
+                        }
+                        h3 {
+                            color: var(--color-softy);
+                            font-size: var(--font-size-6);
+                            font-weight: 400;
+                            margin: 5px 0 10px;
+                        }
+                        h4 {
+                            color: var(--color-white);
+                            font-size: var(--font-size-7);
+                            font-weight: 400;
+                            margin: 10px 0;
+                            text-transform: uppercase;
+                        }
+                        p {
+                            color: var(--color-white);
+                        }
                     }
                 }
                 .pizza-options {
@@ -127,7 +148,6 @@
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: space-between;
-                    margin: 20px 0;
                     li {
                         width: 48%;
                         list-style: none;
@@ -205,6 +225,15 @@
                         padding: 2%;
                         margin-bottom: 0;
                         .ticket-preview-wrapper {}
+                    }
+                    .ticket-preview {
+                        width: 98%;
+                        max-width: 470px;
+                        .ticket-preview-wrapper {
+                            h2 {
+                                margin-bottom: 0;
+                            }
+                        }
                     }
                     .pizza-options {
                         width: 100%;

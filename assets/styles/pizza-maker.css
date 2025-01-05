@@ -106,21 +106,42 @@
   background: var(--color-rally);
 }
 .pizza-maker section#pm-menu .pm-menu-wrapper {
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 30px;
   padding: 0 20px;
 }
-.pizza-maker section#pm-menu .pm-menu-wrapper #ticket {
+.pizza-maker section#pm-menu .pm-menu-wrapper .ticket-preview {
   width: 28%;
   background: var(--color-black);
   border-radius: 6px;
   margin-bottom: 50px;
   padding: 20px;
 }
-.pizza-maker section#pm-menu .pm-menu-wrapper #ticket .ticket-preview-wrapper {
+.pizza-maker section#pm-menu .pm-menu-wrapper .ticket-preview .ticket-preview-wrapper {
   border: 1px solid var(--color-softy);
+}
+.pizza-maker section#pm-menu .pm-menu-wrapper .ticket-preview .ticket-preview-wrapper h2 {
+  border-top: 1px solid var(--color-softy);
+  color: var(--color-white);
+  padding-top: 6px;
+}
+.pizza-maker section#pm-menu .pm-menu-wrapper .ticket-preview .ticket-preview-wrapper h3 {
+  color: var(--color-softy);
+  font-size: var(--font-size-6);
+  font-weight: 400;
+  margin: 5px 0 10px;
+}
+.pizza-maker section#pm-menu .pm-menu-wrapper .ticket-preview .ticket-preview-wrapper h4 {
+  color: var(--color-white);
+  font-size: var(--font-size-7);
+  font-weight: 400;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+.pizza-maker section#pm-menu .pm-menu-wrapper .ticket-preview .ticket-preview-wrapper p {
   color: var(--color-white);
 }
 .pizza-maker section#pm-menu .pm-menu-wrapper .pizza-options {
@@ -129,7 +150,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 20px 0;
 }
 .pizza-maker section#pm-menu .pm-menu-wrapper .pizza-options li {
   width: 48%;
@@ -193,6 +213,13 @@
   .pizza-maker section#pm-menu .pm-menu-wrapper #ticket {
     width: 98%;
     padding: 2%;
+    margin-bottom: 0;
+  }
+  .pizza-maker section#pm-menu .pm-menu-wrapper .ticket-preview {
+    width: 98%;
+    max-width: 470px;
+  }
+  .pizza-maker section#pm-menu .pm-menu-wrapper .ticket-preview .ticket-preview-wrapper h2 {
     margin-bottom: 0;
   }
   .pizza-maker section#pm-menu .pm-menu-wrapper .pizza-options {
