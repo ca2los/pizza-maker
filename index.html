@@ -74,7 +74,7 @@
                     </div>
                     <ul class="pizza-options">
                         <li>
-                            <a id="cheese" class="pizza">
+                            <a id="cheese" class="pizza" onclick="selectedPizza()">
                                 <div class="pizza-image">
                                     <img src="./assets/images/pizza-style.svg" alt="Pizza Image">
                                 </div>
@@ -82,12 +82,12 @@
                                     <h3>Cheese Pizza</h3>
                                     <p>Pizza dough, pizza sauce, mozzarella cheese, parmesan, and garlic.</p>
                                     <p><span>USD $21.50</span></p>
-                                    <button type="button" onclick="">Select</button>
+                                    <button type="button" onclick="selectedPizza()">Select</button>
                                 </div>
                             </a>
                         </li>
                         <li>
-                            <a id="italian" class="pizza">
+                            <a id="italian" class="pizza" onclick="selectedPizza()">
                                 <div class="pizza-image">
                                     <img src="./assets/images/pizza-style.svg" alt="Pizza Image">
                                 </div>
@@ -95,12 +95,12 @@
                                     <h3>Italian Pizza</h3>
                                     <p>Smoked mozzarella cheese, meatballs, caramelized onions, and basil.</p>
                                     <p><span>USD $25.99</span></p>
-                                    <button type="button" onclick="">Select</button>
+                                    <button type="button" onclick="selectedPizza()">Select</button>
                                 </div>
                             </a>
                         </li>
                         <li>
-                            <a id="mexican" class="pizza">
+                            <a id="mexican" class="pizza" onclick="selectedPizza()">
                                 <div class="pizza-image">
                                     <img src="./assets/images/pizza-style.svg" alt="Pizza Image">
                                 </div>
@@ -108,12 +108,12 @@
                                     <h3>Mexican Pizza</h3>
                                     <p>Fried flour tortillas, refried beans, ground beef, cheese, and taco sauce.</p>
                                     <p><span>USD $22.99</span></p>
-                                    <button type="button" onclick="">Select</button>
+                                    <button type="button" onclick="selectedPizza()">Select</button>
                                 </div>
                             </a>
                         </li>
                         <li>
-                            <a id="pepperoni" class="pizza">
+                            <a id="pepperoni" class="pizza" onclick="selectedPizza()">
                                 <div class="pizza-image">
                                     <img src="./assets/images/pizza-style.svg" alt="Pizza Image">
                                 </div>
@@ -121,13 +121,13 @@
                                     <h3>Pepperoni Pizza</h3>
                                     <p>A great crust, gooey cheese, onions, and tons of prime pepperoni.</p>
                                     <p><span>USD $25.99</span></p>
-                                    <button type="button" onclick="">Select</button>
+                                    <button type="button" onclick="selectedPizza()">Select</button>
                                 </div>
                             </a>
                         </li>
                     </ul>
-                    <ul class="pizza-extras">
-                        <li class="pizza-details">
+                    <ul class="pizza-toppings">
+                        <li class="topping">
                             <input type="checkbox" id="mushrooms" name="mushrooms"/>
                             <label for="mushrooms">
                                 <img src="./assets/images/pizza-custom.svg" alt="Pizza Image">
@@ -135,7 +135,7 @@
                             </label>
                             <p><span>USD $2.99</span></p>
                         </li>
-                        <li class="pizza-details">
+                        <li class="topping">
                             <input type="checkbox" id="olives" name="olives"/>
                             <label for="olives">
                                 <img src="./assets/images/pizza-custom.svg" alt="Pizza Image">

@@ -15,13 +15,14 @@ function checkout(reviewName, reviewTel) {
     document.getElementById('pm-ticket').appendChild(HTML_ITEMS[2]).textContent = "Your order"
     document.getElementById('pm-ticket').appendChild(HTML_ITEMS[0]).textContent = reviewName
     document.getElementById('pm-ticket').appendChild(HTML_ITEMS[1]).textContent = reviewTel
+    document.getElementById('pm-ticket').appendChild(HTML_ITEMS[3]).textContent = ""
 }
 
 function pizzaToppings() {
 
 }
 
-function pizzaMenu(reviewName, reviewTel) {
+function selectedPizza() {
     // Pizzas
     let pizzaMenu = {
         cheese: 21.50,
@@ -29,22 +30,17 @@ function pizzaMenu(reviewName, reviewTel) {
         mexican: 22.99,
         pepperoni: 25.99
     }
-    let pizzaInput = {
-        cheese: document.getElementById('cheese').onclick,
-        italian: document.getElementById('italian').onclick,
-        mexican: document.getElementById('mexican').onclick,
-        pepperoni: document.getElementById('pepperoni').onclick
-    }
+    document.querySelector('.pizza-options').style.display = 'none'
+    document.querySelector('.pizza-toppings').style.display = 'block'
+}
 
+function pizzaMenu(reviewName, reviewTel) {
     // Hide & Display
     checkout(reviewName, reviewTel)
     document.getElementById('pizza-form').style.display = 'none'
     document.getElementById('pm-validate').style.display = 'none'
     document.getElementById('pm-menu').style.display = 'block'
     document.querySelector('.btn-wrapper').style.display = 'block'
-
-    // OnClick
-    if (pizzaInput.hasOwnProperty === pizzaMenu.hasOwnProperty) {}
 }
 
 function checkUsername(reviewName, reviewTel) {

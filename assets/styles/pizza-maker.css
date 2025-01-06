@@ -202,7 +202,7 @@
   border-color: #0000001f;
   box-shadow: 0 5px 5px #0000001f;
 }
-.pizza-maker section#pm-menu .pm-menu-wrapper .pizza-extras {
+.pizza-maker section#pm-menu .pm-menu-wrapper .pizza-toppings {
   width: 70%;
   align-items: center;
   display: none;
