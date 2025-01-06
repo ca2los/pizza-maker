@@ -17,26 +17,47 @@ function checkout(reviewName, reviewTel) {
     document.getElementById('pm-ticket').appendChild(HTML_ITEMS[1]).textContent = reviewTel
 }
 
+function pizzaToppings() {
+
+}
+
 function pizzaMenu(reviewName, reviewTel) {
-    // Display Ticket
-    checkout(reviewName, reviewTel)
+    // Pizzas
+    let pizzaMenu = {
+        cheese: 21.50,
+        italian: 25.99,
+        mexican: 22.99,
+        pepperoni: 25.99
+    }
+    let pizzaInput = {
+        cheese: document.getElementById('cheese').onclick,
+        italian: document.getElementById('italian').onclick,
+        mexican: document.getElementById('mexican').onclick,
+        pepperoni: document.getElementById('pepperoni').onclick
+    }
+
     // Hide & Display
+    checkout(reviewName, reviewTel)
     document.getElementById('pizza-form').style.display = 'none'
     document.getElementById('pm-validate').style.display = 'none'
     document.getElementById('pm-menu').style.display = 'block'
-    // Conditional
     document.querySelector('.btn-wrapper').style.display = 'block'
+
+    // OnClick
+    if (pizzaInput.hasOwnProperty === pizzaMenu.hasOwnProperty) {}
 }
 
 function checkUsername(reviewName, reviewTel) {
     // Display Object
     document.getElementById('pm-validate').style.display = 'block'
+
     // Append Objects
     document.getElementById('pm-validate').children[0].appendChild(HTML_ITEMS[1]).textContent = reviewName
     document.getElementById('pm-validate').children[0].appendChild(HTML_ITEMS[2]).textContent = reviewTel
     document.getElementById('pm-validate').children[0].appendChild(HTML_ITEMS[3]).textContent = "Ready to proceed with the menu?"
     document.getElementById('pm-validate').children[0].appendChild(HTML_ITEMS[4]).textContent = "Cancel"
     document.getElementById('pm-validate').children[0].appendChild(HTML_ITEMS[5]).textContent = "Continue"
+
     // On Click
     Object.assign(HTML_ITEMS[4], {
         className: 'cancel',
