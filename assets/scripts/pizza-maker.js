@@ -14,16 +14,16 @@ const HTML_ITEMS = [
     document.createElement('p')
 ]
 
-function pizzaTotal(pizzaCost) {
+/*function pizzaTotal(pizzaCost) {
     // Pizzas
-    /*let pizzaMenu = {
+    let pizzaMenu = {
         cheese: 21.50,
         italian: 25.99,
         mexican: 22.99,
         pepperoni: 25.99
-    }*/
+    }
     console.log(pizzaCost)
-}
+}*/
 
 function checkout(reviewName, reviewTel, pizzaType, pizzaCost) {
     document.getElementById('pm-ticket').appendChild(HTML_ITEMS[2]).textContent = "Your order"
@@ -49,8 +49,20 @@ function selectedPizza(pizzaType) {
     document.querySelector('.pizza-options').style.display = 'none'
     document.querySelector('.pizza-toppings').style.display = 'block'
 
-    // Coerce Object into String
+    // Conditionals to pass data
     if (pizzaType === 'cheese') {
+        console.log(pizzaType + " " + pizzaMenu.cheese)
+        checkout(pizzaType, pizzaMenu.cheese)
+    }
+    if (pizzaType === 'italian') {
+        console.log(pizzaType + " " + pizzaMenu.cheese)
+        checkout(pizzaType, pizzaMenu.cheese)
+    }
+    if (pizzaType === 'mexican') {
+        console.log(pizzaType + " " + pizzaMenu.cheese)
+        checkout(pizzaType, pizzaMenu.cheese)
+    }
+    if (pizzaType === 'pepperoni') {
         console.log(pizzaType + " " + pizzaMenu.cheese)
         checkout(pizzaType, pizzaMenu.cheese)
     }
