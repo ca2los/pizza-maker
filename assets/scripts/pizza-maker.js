@@ -8,30 +8,52 @@ const HTML_ITEMS = [
     document.createElement('h4'),
     document.createElement('p'),
     document.createElement('button'),
-    document.createElement('button')
+    document.createElement('button'),
+    document.createElement('p'),
+    document.createElement('p'),
+    document.createElement('p')
 ]
 
-function checkout(reviewName, reviewTel) {
+function pizzaTotal(pizzaCost) {
+    // Pizzas
+    /*let pizzaMenu = {
+        cheese: 21.50,
+        italian: 25.99,
+        mexican: 22.99,
+        pepperoni: 25.99
+    }*/
+    console.log(pizzaCost)
+}
+
+function checkout(reviewName, reviewTel, pizzaType, pizzaCost) {
     document.getElementById('pm-ticket').appendChild(HTML_ITEMS[2]).textContent = "Your order"
     document.getElementById('pm-ticket').appendChild(HTML_ITEMS[0]).textContent = reviewName
     document.getElementById('pm-ticket').appendChild(HTML_ITEMS[1]).textContent = reviewTel
-    document.getElementById('pm-ticket').appendChild(HTML_ITEMS[3]).textContent = ""
+    document.getElementById('pm-ticket').appendChild(HTML_ITEMS[3]).textContent = pizzaType
+    document.getElementById('pm-ticket').appendChild(HTML_ITEMS[6]).textContent = pizzaCost
 }
 
-function pizzaToppings() {
+//function pizzaToppings() {}
 
-}
 
-function selectedPizza() {
-    // Pizzas
-    let pizzaMenu = {
+function selectedPizza(pizzaType) {
+    // Pizzas HTML
+    let pizzaMenu = { // Values `typeof` are Number && Properties `typeof` are Boolean
         cheese: 21.50,
         italian: 25.99,
         mexican: 22.99,
         pepperoni: 25.99
     }
+
+    // Hide & Display
     document.querySelector('.pizza-options').style.display = 'none'
     document.querySelector('.pizza-toppings').style.display = 'block'
+
+    // Coerce Object into String
+    if (pizzaType === 'cheese') {
+        console.log(pizzaType + " " + pizzaMenu.cheese)
+        checkout(pizzaType, pizzaMenu.cheese)
+    }
 }
 
 function pizzaMenu(reviewName, reviewTel) {

@@ -148,55 +148,54 @@
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: space-between;
-                    li {
+                    .pizza {
                         width: 48%;
                         list-style: none;
                         margin-bottom: 20px;
-                        .pizza {
-                            align-items: center;
-                            background: var(--color-white);
-                            border: 1px solid var(--color-black);
-                            border-radius: 6px;
-                            box-shadow: none;
-                            cursor: pointer;
-                            display: flex;
-                            justify-content: space-between;
-                            padding: 3% 2% 4%;
-                            .pizza-image {
-                                width: 40%;
-                                img {
-                                    width: 90%;
-                                    max-width: 100px;
+                        align-items: center;
+                        background: var(--color-white);
+                        border: 1px solid var(--color-black);
+                        border-radius: 6px;
+                        box-shadow: none;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 3% 2% 4%;
+                        transition: all .5s linear;
+                        .pizza-image {
+                            width: 40%;
+                            img {
+                                width: 90%;
+                                max-width: 100px;
+                            }
+                        }
+                        .pizza-details {
+                            width: 60%;
+                            text-align: left;
+                            h3 {
+                                font-weight: 400;
+                                margin-bottom: 4px;
+                            }
+                            p {
+                                font-size: var(--font-size-7);
+                                margin-bottom: 4px;
+                                span {
+                                    font-size: var(--font-size-6);
                                 }
                             }
-                            .pizza-details {
-                                width: 60%;
-                                text-align: left;
-                                h3 {
-                                    font-weight: 400;
-                                    margin-bottom: 4px;
-                                }
-                                p {
-                                    font-size: var(--font-size-7);
-                                    margin-bottom: 4px;
-                                    span {
-                                        font-size: var(--font-size-6);
-                                    }
-                                }
-                                button {
-                                    background-color: var(--color-white);
-                                    color: var(--color-black);
-                                    &:hover {
-                                        background: var(--color-rally);
-                                        color: var(--color-white);
-                                    }
+                            button {
+                                background-color: var(--color-white);
+                                color: var(--color-black);
+                                &:hover {
+                                    background: var(--color-rally);
+                                    color: var(--color-white);
                                 }
                             }
-                            &:hover {
-                                background: var(--color-clear);
-                                border-color: #0000001f;
-                                box-shadow: 0 5px 5px #0000001f;
-                            }
+                        }
+                        &:hover {
+                            background: var(--color-clear);
+                            border-color: #0000001f;
+                            box-shadow: 0 5px 5px #0000001f;
+                            transition: all .5s linear;
                         }
                     }
                 }
@@ -244,23 +243,21 @@
                     }
                     .pizza-options {
                         width: 100%;
-                        li {
-                            .pizza {
-                                .pizza-image {
-                                    img {
-                                    }
+                        .pizza {
+                            .pizza-image {
+                                img {
                                 }
-                                .pizza-details {
-                                    h3 {}
-                                    p {
-                                        span {}
-                                    }
-                                    button {
-                                        &:hover {}
-                                    }
-                                }
-                                &:hover {}
                             }
+                            .pizza-details {
+                                h3 {}
+                                p {
+                                    span {}
+                                }
+                                button {
+                                    &:hover {}
+                                }
+                            }
+                            &:hover {}
                         }
                     }
                 }
@@ -313,24 +310,22 @@
                         .ticket-preview-wrapper {}
                     }
                     .pizza-options {
-                        li {
-                            width: 100%;
-                            .pizza {
-                                .pizza-image {
-                                    img {
-                                    }
+                        .pizza {
+                        width: 100%;
+                            .pizza-image {
+                                img {
                                 }
-                                .pizza-details {
-                                    h3 {}
-                                    p {
-                                        span {}
-                                    }
-                                    button {
-                                        &:hover {}
-                                    }
-                                }
-                                &:hover {}
                             }
+                            .pizza-details {
+                                h3 {}
+                                p {
+                                    span {}
+                                }
+                                button {
+                                    &:hover {}
+                                }
+                            }
+                            &:hover {}
                         }
                     }
                 }
@@ -368,24 +363,22 @@
                         .ticket-preview-wrapper {}
                     }
                     .pizza-options {
-                        li {
-                            .pizza {
-                                .pizza-image {
-                                    img {
-                                        width: 80px;
-                                    }
+                        .pizza {
+                            .pizza-image {
+                                img {
+                                    width: 80px;
                                 }
-                                .pizza-details {
-                                    h3 {}
-                                    p {
-                                        span {}
-                                    }
-                                    button {
-                                        &:hover {}
-                                    }
-                                }
-                                &:hover {}
                             }
+                            .pizza-details {
+                                h3 {}
+                                p {
+                                    span {}
+                                }
+                                button {
+                                    &:hover {}
+                                }
+                            }
+                            &:hover {}
                         }
                     }
                 }
