@@ -1,6 +1,7 @@
 "use strict";
 // If name and phone exist, then proceeds with the pizza maker
 // Reset button to start again the process
+// Select pizza and update the billing order with previous and new data
 
 const HTML_ITEMS = [
     document.createElement('h2'),
@@ -14,29 +15,19 @@ const HTML_ITEMS = [
     document.createElement('p')
 ]
 
-/*function pizzaTotal(pizzaCost) {
-    // Pizzas
-    let pizzaMenu = {
-        cheese: 21.50,
-        italian: 25.99,
-        mexican: 22.99,
-        pepperoni: 25.99
-    }
-    console.log(pizzaCost)
-}*/
-
-function checkout(reviewName, reviewTel, pizzaType, pizzaCost) {
-    document.getElementById('pm-ticket').appendChild(HTML_ITEMS[2]).textContent = "Your order"
+function billing(reviewName, reviewTel, pizzaType, pizzaCost) {
+    console.log('Billing ->', 'Username:', reviewName, '/ Contact:', reviewTel, '/ Pizza:', pizzaType, '/ Cost:', pizzaCost)
+    document.getElementById('pm-ticket').appendChild(HTML_ITEMS[2]).textContent = "Billing:"
     document.getElementById('pm-ticket').appendChild(HTML_ITEMS[0]).textContent = reviewName
     document.getElementById('pm-ticket').appendChild(HTML_ITEMS[1]).textContent = reviewTel
     document.getElementById('pm-ticket').appendChild(HTML_ITEMS[3]).textContent = pizzaType
     document.getElementById('pm-ticket').appendChild(HTML_ITEMS[6]).textContent = pizzaCost
+    // If condition while pizzaType and pizzaCost is undefined
 }
 
-//function pizzaToppings() {}
+function selectedPizza(pizzaType, reviewName, reviewTel) {
+    console.log('Stage #3 ->', 'Username:', reviewName, '/ Contact:', reviewTel, '/ Pizza:', pizzaType)
 
-
-function selectedPizza(pizzaType) {
     // Pizzas HTML
     let pizzaMenu = { // Values `typeof` are Number && Properties `typeof` are Boolean
         cheese: 21.50,
@@ -51,33 +42,36 @@ function selectedPizza(pizzaType) {
 
     // Conditionals to pass data
     if (pizzaType === 'cheese') {
-        console.log(pizzaType + " " + pizzaMenu.cheese)
-        checkout(pizzaType, pizzaMenu.cheese)
+        billing(reviewName, reviewTel, pizzaType, pizzaMenu.cheese)
     }
     if (pizzaType === 'italian') {
-        console.log(pizzaType + " " + pizzaMenu.cheese)
-        checkout(pizzaType, pizzaMenu.cheese)
+        billing(reviewName, reviewTel, pizzaType, pizzaMenu.italian)
     }
     if (pizzaType === 'mexican') {
-        console.log(pizzaType + " " + pizzaMenu.cheese)
-        checkout(pizzaType, pizzaMenu.cheese)
+        billing(reviewName, reviewTel, pizzaType, pizzaMenu.mexican)
     }
     if (pizzaType === 'pepperoni') {
-        console.log(pizzaType + " " + pizzaMenu.cheese)
-        checkout(pizzaType, pizzaMenu.cheese)
+        billing(reviewName, reviewTel, pizzaType, pizzaMenu.pepperoni)
     }
 }
 
 function pizzaMenu(reviewName, reviewTel) {
+    console.log('Stage #2 ->', 'Username:', reviewName, '/ Contact:', reviewTel)
+
     // Hide & Display
-    checkout(reviewName, reviewTel)
     document.getElementById('pizza-form').style.display = 'none'
     document.getElementById('pm-validate').style.display = 'none'
     document.getElementById('pm-menu').style.display = 'block'
     document.querySelector('.btn-wrapper').style.display = 'block'
+
+    // Pass Data
+    billing(reviewName, reviewTel)
+    document.querySelectorAll('.btn-bookmark').onclick = () => selectedPizza(reviewName, reviewTel)
 }
 
 function checkUsername(reviewName, reviewTel) {
+    console.log('Stage #1 ->', 'Username:', reviewName, '/ Contact:', reviewTel)
+
     // Display Object
     document.getElementById('pm-validate').style.display = 'block'
 
@@ -112,14 +106,3 @@ function pizzaCustomer() {
         checkUsername(nameSubmit, phoneSubmit);
     }
 }
-
-// ToDo
-// Arrow Functions
-// Male & Female
-// Display the data retrieved in checkout()
-// Create the pizza menu HTML modules in #pm-menu
-// Retrieve the selected values
-// If the pizza has been selected, then display the 'Cancel' and 'Confirm' buttons.
-// For future projects: Build a guide to JS DOM API commands
-// For future projects: Seed data into the JS project (simulate a database)
-// For future projects: Gran Turismo configurator
