@@ -12,6 +12,7 @@ const HTML_ITEMS = [
     document.createElement('button'),
     document.createElement('p'),
     document.createElement('p'),
+    document.createElement('p'),
     document.createElement('p')
 ]
 
@@ -23,11 +24,13 @@ const PIZZA_MENU = {
 }
 
 function billing(reviewName, reviewTel, pizzaType, pizzaCost) {
-    document.getElementById('pm-ticket').appendChild(HTML_ITEMS[2]).textContent = "Billing:"
+    document.getElementById('pm-ticket').appendChild(HTML_ITEMS[2]).textContent = 'Billing'
     document.getElementById('pm-ticket').appendChild(HTML_ITEMS[0]).textContent = reviewName
     document.getElementById('pm-ticket').appendChild(HTML_ITEMS[1]).textContent = reviewTel
-    document.getElementById('pm-ticket').appendChild(HTML_ITEMS[3]).textContent = pizzaType
-    document.getElementById('pm-ticket').appendChild(HTML_ITEMS[6]).textContent = pizzaCost
+    if (pizzaType !== undefined || pizzaCost !== undefined) {
+        document.getElementById('pm-ticket').appendChild(HTML_ITEMS[3]).textContent = `Pizza: ${pizzaType}`
+        document.getElementById('pm-ticket').appendChild(HTML_ITEMS[6]).textContent = `USD $${pizzaCost}`
+    }
 }
 
 function pizzaToppings(reviewName, reviewTel, pizzaType, pizzaCost) {
@@ -35,7 +38,7 @@ function pizzaToppings(reviewName, reviewTel, pizzaType, pizzaCost) {
 
     // Hide & Display & Modify
     document.querySelector('.pizza-options').style.display = 'none'
-    document.querySelector('.pizza-toppings').style.display = 'block'
+    document.querySelector('.pizza-toppings').style.display = 'flex'
     document.getElementById('pm-menu').children[0].textContent = 'Select the toppings of your preference:'
 
     // Pass Data (Billing)
