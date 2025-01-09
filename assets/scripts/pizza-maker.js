@@ -33,9 +33,10 @@ function billing(reviewName, reviewTel, pizzaType, pizzaCost) {
 function pizzaToppings(reviewName, reviewTel, pizzaType, pizzaCost) {
     console.log('Stage #3 ->', 'Username:', reviewName, '/ Contact:', reviewTel, '/ Pizza:', pizzaType, '/ Cost:', pizzaCost)
 
-    // Hide & Display
+    // Hide & Display & Modify
     document.querySelector('.pizza-options').style.display = 'none'
     document.querySelector('.pizza-toppings').style.display = 'block'
+    document.getElementById('pm-menu').children[0].textContent = 'Select the toppings of your preference:'
 
     // Pass Data (Billing)
     billing(reviewName, reviewTel, pizzaType, pizzaCost)
