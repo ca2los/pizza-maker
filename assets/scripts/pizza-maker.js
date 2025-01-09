@@ -43,6 +43,11 @@ function pizzaToppings(reviewName, reviewTel, pizzaType, pizzaCost) {
 
     // Pass Data (Billing)
     billing(reviewName, reviewTel, pizzaType, pizzaCost)
+
+    // Adding Toppings
+        // Add styles when input has "checked" value
+        // Remove styles when input has not "checked" value
+        // Pass data values to billing() after onClick() "Order" button.
 }
 
 function pizzaMenu(reviewName, reviewTel) {
