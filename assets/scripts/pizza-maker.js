@@ -15,6 +15,13 @@ const HTML_ITEMS = [
     document.createElement('p')
 ]
 
+const PIZZA_MENU = {
+    cheese: 21.50,
+    italian: 25.99,
+    mexican: 22.99,
+    pepperoni: 25.99
+}
+
 function billing(reviewName, reviewTel, pizzaType, pizzaCost) {
     document.getElementById('pm-ticket').appendChild(HTML_ITEMS[2]).textContent = "Billing:"
     document.getElementById('pm-ticket').appendChild(HTML_ITEMS[0]).textContent = reviewName
@@ -23,26 +30,15 @@ function billing(reviewName, reviewTel, pizzaType, pizzaCost) {
     document.getElementById('pm-ticket').appendChild(HTML_ITEMS[6]).textContent = pizzaCost
 }
 
-function selectedPizza(pizzaType, reviewName, reviewTel) {
-    console.log('Stage #3 ->', 'Username:', reviewName, '/ Contact:', reviewTel, '/ Pizza:', pizzaType)
-
-    // Pizzas HTML
-    let pizzaMenu = { // Values `typeof` are Number && Properties `typeof` are Boolean
-        cheese: 21.50,
-        italian: 25.99,
-        mexican: 22.99,
-        pepperoni: 25.99
-    }
+function selectedPizza(reviewName, reviewTel, pizzaType, pizzaCost) {
+    console.log('Stage #3 ->', 'Username:', reviewName, '/ Contact:', reviewTel, '/ Pizza:', pizzaType, '/ Cost:', pizzaCost)
 
     // Hide & Display
     document.querySelector('.pizza-options').style.display = 'none'
     document.querySelector('.pizza-toppings').style.display = 'block'
 
-    // Conditionals to pass data
-    if (pizzaType === pizzaMenu[pizzaType]) {
-        billing(reviewName, reviewTel, pizzaType, pizzaMenu[pizzaType])
-        console.log('Stage #3 ->', 'Username:', reviewName, '/ Contact:', reviewTel, '/ Pizza:', pizzaType, '/ Cost:', pizzaMenu[pizzaType])
-    }
+    // Pass Data (Billing)
+    billing(reviewName, reviewTel, pizzaType, pizzaCost)
 }
 
 function pizzaMenu(reviewName, reviewTel) {
@@ -54,9 +50,14 @@ function pizzaMenu(reviewName, reviewTel) {
     document.getElementById('pm-menu').style.display = 'block'
     document.querySelector('.btn-wrapper').style.display = 'block'
 
-    // Pass Data
+    // Pass Data (Billing)
     billing(reviewName, reviewTel)
-    document.querySelectorAll('.btn-bookmark').onclick = () => selectedPizza(reviewName, reviewTel)
+
+    // Pass Data (Selected Pizza)
+    const btnBookmark = document.querySelectorAll('.btn-bookmark')
+    btnBookmark.forEach(button => {
+        button.onclick = () => selectedPizza(reviewName, reviewTel, button.value, PIZZA_MENU[button.value])
+    })
 }
 
 function checkUsername(reviewName, reviewTel) {
