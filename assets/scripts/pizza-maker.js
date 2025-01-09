@@ -30,7 +30,7 @@ function billing(reviewName, reviewTel, pizzaType, pizzaCost) {
     document.getElementById('pm-ticket').appendChild(HTML_ITEMS[6]).textContent = pizzaCost
 }
 
-function selectedPizza(reviewName, reviewTel, pizzaType, pizzaCost) {
+function pizzaToppings(reviewName, reviewTel, pizzaType, pizzaCost) {
     console.log('Stage #3 ->', 'Username:', reviewName, '/ Contact:', reviewTel, '/ Pizza:', pizzaType, '/ Cost:', pizzaCost)
 
     // Hide & Display
@@ -53,10 +53,10 @@ function pizzaMenu(reviewName, reviewTel) {
     // Pass Data (Billing)
     billing(reviewName, reviewTel)
 
-    // Pass Data (Selected Pizza)
+    // Pass Data (Pizza Toppings)
     const btnBookmark = document.querySelectorAll('.btn-bookmark')
     btnBookmark.forEach(button => {
-        button.onclick = () => selectedPizza(reviewName, reviewTel, button.value, PIZZA_MENU[button.value])
+        button.onclick = () => pizzaToppings(reviewName, reviewTel, button.value, PIZZA_MENU[button.value])
     })
 }
 
