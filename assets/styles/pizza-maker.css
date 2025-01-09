@@ -142,7 +142,15 @@
   text-transform: uppercase;
 }
 .pizza-maker section#pm-menu .pm-menu-wrapper .ticket-preview .ticket-preview-wrapper p {
-  color: var(--color-white);
+  color: var(--color-softy);
+}
+.pizza-maker section#pm-menu .pm-menu-wrapper .ticket-preview .ticket-preview-wrapper p:first-of-type {
+  border-top: 1px solid var(--color-softy);
+  padding-top: 10px;
+  text-transform: uppercase;
+}
+.pizza-maker section#pm-menu .pm-menu-wrapper .ticket-preview .ticket-preview-wrapper p:last-of-type {
+  padding-bottom: 12px;
 }
 .pizza-maker section#pm-menu .pm-menu-wrapper .pizza-options {
   width: 70%;
@@ -207,6 +215,21 @@
   display: none;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+.pizza-maker section#pm-menu .pm-menu-wrapper .pizza-toppings .topping {
+  width: 30%;
+  list-style: none;
+  margin-bottom: 20px;
+  align-items: center;
+  background: var(--color-white);
+  border: 1px solid var(--color-black);
+  border-radius: 6px;
+  box-shadow: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 3% 1.5% 4%;
+  transition: all 0.5s linear;
 }
 .pizza-maker section#pm-menu .btn-wrapper {
   display: none;
