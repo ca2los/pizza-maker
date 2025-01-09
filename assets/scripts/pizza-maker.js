@@ -21,18 +21,6 @@ function billing(reviewName, reviewTel, pizzaType, pizzaCost) {
     document.getElementById('pm-ticket').appendChild(HTML_ITEMS[1]).textContent = reviewTel
     document.getElementById('pm-ticket').appendChild(HTML_ITEMS[3]).textContent = pizzaType
     document.getElementById('pm-ticket').appendChild(HTML_ITEMS[6]).textContent = pizzaCost
-    /*
-    if (reviewName !== undefined && reviewTel !== undefined) {
-        document.getElementById('pm-ticket').appendChild(HTML_ITEMS[0]).textContent = reviewName
-        document.getElementById('pm-ticket').appendChild(HTML_ITEMS[1]).textContent = reviewTel
-    }
-    if (reviewName !== undefined && reviewTel !== undefined && pizzaType !== undefined && pizzaCost !== undefined) {
-        document.getElementById('pm-ticket').appendChild(HTML_ITEMS[0]).textContent = reviewName
-        document.getElementById('pm-ticket').appendChild(HTML_ITEMS[1]).textContent = reviewTel
-        document.getElementById('pm-ticket').appendChild(HTML_ITEMS[3]).textContent = pizzaType
-        document.getElementById('pm-ticket').appendChild(HTML_ITEMS[6]).textContent = pizzaCost
-    }
-    */
 }
 
 function selectedPizza(pizzaType, reviewName, reviewTel) {
@@ -51,21 +39,9 @@ function selectedPizza(pizzaType, reviewName, reviewTel) {
     document.querySelector('.pizza-toppings').style.display = 'block'
 
     // Conditionals to pass data
-    if (pizzaType === 'cheese') {
-        billing(reviewName, reviewTel, pizzaType, pizzaMenu.cheese)
-        console.log('Stage #3 ->', 'Username:', reviewName, '/ Contact:', reviewTel, '/ Pizza:', pizzaType, '/ Cost:', pizzaMenu.cheese)
-    }
-    if (pizzaType === 'italian') {
-        billing(reviewName, reviewTel, pizzaType, pizzaMenu.italian)
-        console.log('Stage #3 ->', 'Username:', reviewName, '/ Contact:', reviewTel, '/ Pizza:', pizzaType, '/ Cost:', pizzaMenu.italian)
-    }
-    if (pizzaType === 'mexican') {
-        billing(reviewName, reviewTel, pizzaType, pizzaMenu.mexican)
-        console.log('Stage #3 ->', 'Username:', reviewName, '/ Contact:', reviewTel, '/ Pizza:', pizzaType, '/ Cost:', pizzaMenu.mexican)
-    }
-    if (pizzaType === 'pepperoni') {
-        billing(reviewName, reviewTel, pizzaType, pizzaMenu.pepperoni)
-        console.log('Stage #3 ->', 'Username:', reviewName, '/ Contact:', reviewTel, '/ Pizza:', pizzaType, '/ Cost:', pizzaMenu.pepperoni)
+    if (pizzaType === pizzaMenu[pizzaType]) {
+        billing(reviewName, reviewTel, pizzaType, pizzaMenu[pizzaType])
+        console.log('Stage #3 ->', 'Username:', reviewName, '/ Contact:', reviewTel, '/ Pizza:', pizzaType, '/ Cost:', pizzaMenu[pizzaType])
     }
 }
 
