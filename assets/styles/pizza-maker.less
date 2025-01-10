@@ -5,6 +5,7 @@
         width: 90%;
         max-width: 980px;
         margin: 0 auto 50px;
+        padding: 0 1%;
         text-align: center;
         h1 {
             font-size: var(--font-size-1);
@@ -90,7 +91,9 @@
             max-width: 1200px;
             display: none;
             h2 {
+                width: 94%;
                 font-weight: 400;
+                padding: 0 6%;
             }
             button {
                 background-color: var(--color-black);
@@ -216,6 +219,7 @@
                     .topping {
                         width: 30%;
                         max-width: 250px;
+                        min-width: 240px;
                         list-style: none;
                         margin-bottom: 20px;
                         background: var(--color-white);
@@ -323,6 +327,8 @@
                     .pizza-toppings {
                         width: 100%;
                         .topping {
+                            width: auto;
+                            margin: 0 auto 20px;
                             label {
                                 img {}
                                 span {
@@ -408,6 +414,36 @@
                     }
                 }
                 .btn-wrapper {}
+            }
+        }
+    }
+}
+@media only screen and (max-width: 519px) {
+    .pizza-maker {
+        section {
+            &#pm-menu {
+                .pm-menu-wrapper {
+                    .pizza-toppings {
+                        .topping {
+                            width: 98%;
+                            max-width: none;
+                            min-width: auto;
+                            label {
+                                img {}
+                                span {
+                                    &.price {}
+                                }
+                            }
+                            &:hover {
+                                label {
+                                    span {
+                                        &.price {}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

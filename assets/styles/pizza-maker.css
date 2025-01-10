@@ -6,6 +6,7 @@
   width: 90%;
   max-width: 980px;
   margin: 0 auto 50px;
+  padding: 0 1%;
   text-align: center;
 }
 .pizza-maker header h1 {
@@ -91,7 +92,9 @@
   display: none;
 }
 .pizza-maker section#pm-menu h2 {
+  width: 94%;
   font-weight: 400;
+  padding: 0 6%;
 }
 .pizza-maker section#pm-menu button {
   background-color: var(--color-black);
@@ -219,6 +222,7 @@
 .pizza-maker section#pm-menu .pm-menu-wrapper .pizza-toppings .topping {
   width: 30%;
   max-width: 250px;
+  min-width: 240px;
   list-style: none;
   margin-bottom: 20px;
   background: var(--color-white);
@@ -290,6 +294,10 @@
   .pizza-maker section#pm-menu .pm-menu-wrapper .pizza-toppings {
     width: 100%;
   }
+  .pizza-maker section#pm-menu .pm-menu-wrapper .pizza-toppings .topping {
+    width: auto;
+    margin: 0 auto 20px;
+  }
 }
 @media only screen and (max-width: 769px) {
   .pizza-maker header {
@@ -320,6 +328,13 @@
   }
   .pizza-maker section#pm-menu .pm-menu-wrapper .pizza-options .pizza {
     width: 100%;
+  }
+}
+@media only screen and (max-width: 519px) {
+  .pizza-maker section#pm-menu .pm-menu-wrapper .pizza-toppings .topping {
+    width: 98%;
+    max-width: none;
+    min-width: auto;
   }
 }
 @media only screen and (max-width: 480px) {
