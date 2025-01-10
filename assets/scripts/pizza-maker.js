@@ -54,7 +54,7 @@ function pizzaMenu(reviewName, reviewTel) {
     console.log('Stage #2 ->', 'Username:', reviewName, '/ Contact:', reviewTel)
 
     // Hide & Display
-    document.getElementById('pizza-form').style.display = 'none'
+    document.querySelector('.pm-intro').style.display = 'none'
     document.getElementById('pm-validate').style.display = 'none'
     document.getElementById('pm-menu').style.display = 'block'
     document.querySelector('.btn-wrapper').style.display = 'block'
