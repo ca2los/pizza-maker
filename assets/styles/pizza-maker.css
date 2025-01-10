@@ -13,6 +13,9 @@
   font-size: var(--font-size-1);
   line-height: 1;
 }
+.pizza-maker header h1 a {
+  text-decoration: none;
+}
 .pizza-maker header h2 {
   font-family: "Bungee Tint", serif;
   font-weight: 400;
