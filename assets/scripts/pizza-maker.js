@@ -23,13 +23,16 @@ const PIZZA_MENU = {
     pepperoni: 25.99
 }
 
-function billing(reviewName, reviewTel, pizzaType, pizzaCost) {
+function billing(reviewName, reviewTel, pizzaType, pizzaCost, toppingType) {
     document.getElementById('pm-ticket').appendChild(HTML_ITEMS[2]).textContent = 'Billing'
     document.getElementById('pm-ticket').appendChild(HTML_ITEMS[0]).textContent = reviewName
     document.getElementById('pm-ticket').appendChild(HTML_ITEMS[1]).textContent = reviewTel
     if (pizzaType !== undefined || pizzaCost !== undefined) {
         document.getElementById('pm-ticket').appendChild(HTML_ITEMS[3]).textContent = `Pizza: ${pizzaType}`
         document.getElementById('pm-ticket').appendChild(HTML_ITEMS[6]).textContent = `USD $${pizzaCost}`
+    }
+    if (toppingType !== undefined) {
+        document.getElementById('pm-ticket').appendChild(HTML_ITEMS[7]).textContent = `Topping: ${pizzaType}`
     }
 }
 
@@ -48,6 +51,12 @@ function pizzaToppings(reviewName, reviewTel, pizzaType, pizzaCost) {
         // Add styles when input has "checked" value
         // Remove styles when input has not "checked" value
         // Pass data values to billing() after onClick() "Order" button.
+        // Adding value to <li>
+        // Adding aria-checked to <li>
+    const checkBox = document.querySelectorAll('.checkbox')
+    checkBox.forEach(element => {
+        element.onclick = () => billing(reviewName, reviewTel, pizzaType, pizzaCost, checkBox.value)
+    })
 }
 
 function pizzaMenu(reviewName, reviewTel) {
