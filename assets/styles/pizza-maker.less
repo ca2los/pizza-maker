@@ -215,44 +215,39 @@
                     justify-content: space-between;
                     .topping {
                         width: 30%;
+                        max-width: 250px;
                         list-style: none;
                         margin-bottom: 20px;
-                        align-items: center;
                         background: var(--color-white);
                         border: 1px solid var(--color-black);
                         border-radius: 6px;
                         box-shadow: none;
                         cursor: pointer;
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: space-between;
-                        padding: 2.2% 1.5% 2.6%;
-                        transition: all .5s linear;
-                        .topping-image {
+                        padding: 2.2% 1.5% 2.4%;
+                        transition: all 0.5s linear;
+                        label {
                             width: 100%;
+                            align-items: center;
+                            cursor: pointer;
                             display: flex;
-                            flex-wrap: wrap;
-                            justify-content: center;
-                            img {
-                                margin: 0 10px 0 0;
-                            }
-                            h3 {
-                                font-weight: 400;
+                            flex-wrap: nowrap;
+                            justify-content: left;
+                            input {
                                 margin: 0;
                             }
-                        }
-                        p {
-                            width: 100%;
-                            &.price {
-                                width: 140px;
-                                border: 1px solid var(--color-black);
-                                border-radius: 6px;
-                                font-size: var(--font-size-7);
-                                margin-top: 10px;
-                                padding: 6px 10px;
+                            img {
+                                margin: 0 6px;
                             }
                             span {
-                                display: none;
+                                margin: 0;
+                                &.price {
+                                    width: 70px;
+                                    border: 1px solid var(--color-black);
+                                    border-radius: 6px;
+                                    font-size: var(--font-size-7);
+                                    padding: 6px 0;
+                                    margin-left: inherit;
+                                }
                             }
                         }
                         &:hover {
@@ -260,20 +255,12 @@
                             border-color: #0000001f;
                             box-shadow: 0 5px 5px #0000001f;
                             transition: all .5s linear;
-                            p {
-                                &.price {
-                                    background: var(--color-rally);
-                                    color: var(--color-white);
-                                }
-                            }
-                        }
-                        &:active {
-                            background: var(--color-clear);
-                            transition: all .5s linear;
-                            p {
-                                &.price {
-                                    background: var(--color-black);
-                                    color: var(--color-white);
+                            label {
+                                span {
+                                    &.price {
+                                        background: var(--color-rally);
+                                        color: var(--color-white);
+                                    }
                                 }
                             }
                         }
@@ -331,6 +318,24 @@
                                 }
                             }
                             &:hover {}
+                        }
+                    }
+                    .pizza-toppings {
+                        width: 100%;
+                        .topping {
+                            label {
+                                img {}
+                                span {
+                                    &.price {}
+                                }
+                            }
+                            &:hover {
+                                label {
+                                    span {
+                                        &.price {}
+                                    }
+                                }
+                            }
                         }
                     }
                 }

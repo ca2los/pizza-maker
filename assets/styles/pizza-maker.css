@@ -218,46 +218,41 @@
 }
 .pizza-maker section#pm-menu .pm-menu-wrapper .pizza-toppings .topping {
   width: 30%;
+  max-width: 250px;
   list-style: none;
   margin-bottom: 20px;
-  align-items: center;
   background: var(--color-white);
   border: 1px solid var(--color-black);
   border-radius: 6px;
   box-shadow: none;
   cursor: pointer;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 2.2% 1.5% 2.6%;
+  padding: 2.2% 1.5% 2.4%;
   transition: all 0.5s linear;
 }
-.pizza-maker section#pm-menu .pm-menu-wrapper .pizza-toppings .topping .topping-image {
+.pizza-maker section#pm-menu .pm-menu-wrapper .pizza-toppings .topping label {
   width: 100%;
+  align-items: center;
+  cursor: pointer;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
+  justify-content: left;
 }
-.pizza-maker section#pm-menu .pm-menu-wrapper .pizza-toppings .topping .topping-image img {
-  margin: 0 10px 0 0;
-}
-.pizza-maker section#pm-menu .pm-menu-wrapper .pizza-toppings .topping .topping-image h3 {
-  font-weight: 400;
+.pizza-maker section#pm-menu .pm-menu-wrapper .pizza-toppings .topping label input {
   margin: 0;
 }
-.pizza-maker section#pm-menu .pm-menu-wrapper .pizza-toppings .topping p {
-  width: 100%;
+.pizza-maker section#pm-menu .pm-menu-wrapper .pizza-toppings .topping label img {
+  margin: 0 6px;
 }
-.pizza-maker section#pm-menu .pm-menu-wrapper .pizza-toppings .topping p.price {
-  width: 140px;
+.pizza-maker section#pm-menu .pm-menu-wrapper .pizza-toppings .topping label span {
+  margin: 0;
+}
+.pizza-maker section#pm-menu .pm-menu-wrapper .pizza-toppings .topping label span.price {
+  width: 70px;
   border: 1px solid var(--color-black);
   border-radius: 6px;
   font-size: var(--font-size-7);
-  margin-top: 10px;
-  padding: 6px 10px;
-}
-.pizza-maker section#pm-menu .pm-menu-wrapper .pizza-toppings .topping p span {
-  display: none;
+  padding: 6px 0;
+  margin-left: inherit;
 }
 .pizza-maker section#pm-menu .pm-menu-wrapper .pizza-toppings .topping:hover {
   background: var(--color-clear);
@@ -265,16 +260,8 @@
   box-shadow: 0 5px 5px #0000001f;
   transition: all 0.5s linear;
 }
-.pizza-maker section#pm-menu .pm-menu-wrapper .pizza-toppings .topping:hover p.price {
+.pizza-maker section#pm-menu .pm-menu-wrapper .pizza-toppings .topping:hover label span.price {
   background: var(--color-rally);
-  color: var(--color-white);
-}
-.pizza-maker section#pm-menu .pm-menu-wrapper .pizza-toppings .topping:active {
-  background: var(--color-clear);
-  transition: all 0.5s linear;
-}
-.pizza-maker section#pm-menu .pm-menu-wrapper .pizza-toppings .topping:active p.price {
-  background: var(--color-black);
   color: var(--color-white);
 }
 .pizza-maker section#pm-menu .btn-wrapper {
@@ -298,6 +285,9 @@
     margin-bottom: 0;
   }
   .pizza-maker section#pm-menu .pm-menu-wrapper .pizza-options {
+    width: 100%;
+  }
+  .pizza-maker section#pm-menu .pm-menu-wrapper .pizza-toppings {
     width: 100%;
   }
 }
