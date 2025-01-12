@@ -53,9 +53,9 @@ function pizzaToppings(reviewName, reviewTel, pizzaType, pizzaCost) {
         // Pass data values to billing() after onClick() "Order" button.
         // Adding value to <li>
         // Adding aria-checked to <li>
-    const checkBox = document.querySelectorAll('.checkbox')
-    checkBox.forEach(element => {
-        element.onclick = () => billing(reviewName, reviewTel, pizzaType, pizzaCost, checkBox.value)
+    const selectedTopping = document.querySelectorAll('.topping')
+    selectedTopping.forEach(element => {
+        element.onclick = () => billing(reviewName, reviewTel, pizzaType, pizzaCost, selectedTopping.value)
     })
 }
 
