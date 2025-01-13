@@ -54,8 +54,12 @@ function pizzaToppings(reviewName, reviewTel, pizzaType, pizzaCost) {
         // Adding value to <li>
         // Adding aria-checked to <li>
     const selectedTopping = document.querySelectorAll('.topping')
-    selectedTopping.forEach(element => {
-        element.onclick = () => billing(reviewName, reviewTel, pizzaType, pizzaCost, selectedTopping.value)
+    selectedTopping.forEach(topping => {
+        topping.onclick = function () {
+            topping.children[0].children[1].style.color = '#c3c3c3'
+            topping.children[0].children[2].style.color = '#c3c3c3'
+            topping.children[0].children[2].textContent = 'Added'
+        }
     })
 }
 
