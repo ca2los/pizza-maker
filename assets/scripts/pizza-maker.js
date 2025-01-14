@@ -13,7 +13,8 @@ const HTML_ITEMS = [
     document.createElement('p'),
     document.createElement('p'),
     document.createElement('p'),
-    document.createElement('p')
+    document.createElement('p'),
+    document.createElement('button')
 ]
 
 const PIZZA_MENU = {
@@ -22,6 +23,8 @@ const PIZZA_MENU = {
     mexican: 22.99,
     pepperoni: 25.99
 }
+
+function checkout() {}
 
 function billing(reviewName, reviewTel, pizzaType, pizzaCost, toppingType) {
     document.getElementById('pm-ticket').appendChild(HTML_ITEMS[2]).textContent = 'Billing'
@@ -43,9 +46,17 @@ function pizzaToppings(reviewName, reviewTel, pizzaType, pizzaCost) {
     document.querySelector('.pizza-options').style.display = 'none'
     document.querySelector('.pizza-toppings').style.display = 'flex'
     document.getElementById('pm-menu').children[0].textContent = 'Select the toppings of your preference:'
+    document.querySelector('.btn-wrapper').appendChild(HTML_ITEMS[10]).textContent = 'Order Pizza'
 
     // Pass Data (Billing)
     billing(reviewName, reviewTel, pizzaType, pizzaCost)
+
+    // On Click
+    Object.assign(HTML_ITEMS[10], {
+        className: 'order-pizza',
+        onclick: () => checkout(reviewName, reviewTel, pizzaType, pizzaCost),
+        type: 'button'
+    })
 
     // Adding Toppings
         // Add styles when input has "checked" value
