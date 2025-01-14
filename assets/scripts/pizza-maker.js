@@ -45,7 +45,7 @@ function pizzaToppings(reviewName, reviewTel, pizzaType, pizzaCost) {
     // Hide & Display & Modify
     document.querySelector('.pizza-options').style.display = 'none'
     document.querySelector('.pizza-toppings').style.display = 'flex'
-    document.getElementById('pm-menu').children[0].textContent = 'Select the toppings of your preference:'
+    document.getElementById('pm-menu').children[0].textContent = 'Try our gourmet toppings:'
     document.querySelector('.btn-wrapper').appendChild(HTML_ITEMS[10]).textContent = 'Order Pizza'
 
     // Pass Data (Billing)
