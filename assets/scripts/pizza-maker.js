@@ -70,6 +70,7 @@ function pizzaToppings(reviewName, reviewTel, pizzaType, pizzaCost) {
             topping.children[0].children[1].style.color = '#c3c3c3'
             topping.children[0].children[2].style.color = '#c3c3c3'
             topping.children[0].children[2].textContent = 'Added'
+            // On Click Object.assign
         }
     })
 }
