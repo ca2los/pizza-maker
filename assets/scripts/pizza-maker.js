@@ -24,7 +24,16 @@ const PIZZA_MENU = {
     pepperoni: 25.99
 }
 
-function checkout() {}
+function checkout(reviewName, reviewTel, pizzaType, pizzaCost, toppingType) {
+
+    // Hide & Modify
+    document.querySelector('.pizza-toppings').style.display = 'none';
+    document.getElementById('pm-menu').children[0].textContent = 'Your order is in process'
+
+    // Pass Data (Billing)
+    billing(reviewName, reviewTel, pizzaType, pizzaCost, toppingType)
+
+}
 
 function billing(reviewName, reviewTel, pizzaType, pizzaCost, toppingType) {
     document.getElementById('pm-ticket').appendChild(HTML_ITEMS[2]).textContent = 'Billing'
@@ -52,11 +61,7 @@ function pizzaToppings(reviewName, reviewTel, pizzaType, pizzaCost) {
     billing(reviewName, reviewTel, pizzaType, pizzaCost)
 
     // On Click
-    Object.assign(HTML_ITEMS[10], {
-        className: 'order-pizza',
-        onclick: () => checkout(reviewName, reviewTel, pizzaType, pizzaCost),
-        type: 'button'
-    })
+
 
     // Adding Toppings
         // Add styles when input has "checked" value
@@ -65,13 +70,9 @@ function pizzaToppings(reviewName, reviewTel, pizzaType, pizzaCost) {
         // Adding value to <li>
         // Adding aria-checked to <li>
     const selectedTopping = document.querySelectorAll('.topping')
+    console.log(typeof selectedTopping.value)
     selectedTopping.forEach(topping => {
-        topping.onclick = function () {
-            topping.children[0].children[1].style.color = '#c3c3c3'
-            topping.children[0].children[2].style.color = '#c3c3c3'
-            topping.children[0].children[2].textContent = 'Added'
-            // On Click Object.assign ¿?
-        }
+        topping.onclick = () => checkout(reviewName, reviewTel, pizzaType, pizzaCost, selectedTopping.value)
     })
 }
 
