@@ -25,6 +25,7 @@ const PIZZA_MENU = {
 }
 
 function checkout(reviewName, reviewTel, pizzaType, pizzaCost, toppingType) {
+    console.log('Stage #4 ->', 'Username:', reviewName, '/ Contact:', reviewTel, '/ Pizza:', pizzaType, '/ Cost:', pizzaCost, '/ Topping:', toppingType)
 
     // Hide & Modify
     document.querySelector('.pizza-toppings').style.display = 'none';
@@ -32,7 +33,6 @@ function checkout(reviewName, reviewTel, pizzaType, pizzaCost, toppingType) {
 
     // Pass Data (Billing)
     billing(reviewName, reviewTel, pizzaType, pizzaCost, toppingType)
-
 }
 
 function billing(reviewName, reviewTel, pizzaType, pizzaCost, toppingType) {
@@ -73,6 +73,7 @@ function pizzaToppings(reviewName, reviewTel, pizzaType, pizzaCost) {
     console.log(typeof selectedTopping.value)
     selectedTopping.forEach(topping => {
         topping.onclick = () => checkout(reviewName, reviewTel, pizzaType, pizzaCost, selectedTopping.value)
+        // Add a CONST with toppings and compare the value of <li> against the CONST object.
     })
 }
 
