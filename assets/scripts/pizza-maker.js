@@ -24,6 +24,18 @@ const PIZZA_MENU = {
     pepperoni: 25.99
 }
 
+const PIZZA_TOPPINGS = {
+    basil: 1.50,
+    garlic: 0.99,
+    ham: 2.99,
+    meatballs: 4.99,
+    mushrooms: 1.99,
+    olives: 2.50,
+    parmesan: 1.99,
+    peppers: 2.50,
+    sausage: 3.99
+}
+
 function checkout(reviewName, reviewTel, pizzaType, pizzaCost, toppingType) {
     console.log('Stage #4 ->', 'Username:', reviewName, '/ Contact:', reviewTel, '/ Pizza:', pizzaType, '/ Cost:', pizzaCost, '/ Topping:', toppingType)
 
