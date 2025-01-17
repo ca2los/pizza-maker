@@ -36,15 +36,15 @@ const PIZZA_TOPPINGS = {
     sausage: 3.99
 }
 
-function checkout(reviewName, reviewTel, pizzaType, pizzaCost, toppingType) {
-    console.log('Stage #4 ->', 'Username:', reviewName, '/ Contact:', reviewTel, '/ Pizza:', pizzaType, '/ Cost:', pizzaCost, '/ Topping:', toppingType)
+function checkout(reviewName, reviewTel, pizzaType, pizzaCost, toppingType, toppingCost) {
+    console.log('Stage #4 ->', 'Username:', reviewName, '/ Contact:', reviewTel, '/ Pizza:', pizzaType, '/ Cost:', pizzaCost, '/ Topping:', toppingType, '/ Cost:', toppingCost)
 
     // Hide & Modify
     document.querySelector('.pizza-toppings').style.display = 'none';
     document.getElementById('pm-menu').children[0].textContent = 'Your order is in process'
 
     // Pass Data (Billing)
-    billing(reviewName, reviewTel, pizzaType, pizzaCost, toppingType)
+    billing(reviewName, reviewTel, pizzaType, pizzaCost, toppingType, toppingCost)
 }
 
 function billing(reviewName, reviewTel, pizzaType, pizzaCost, toppingType) {
@@ -82,9 +82,8 @@ function pizzaToppings(reviewName, reviewTel, pizzaType, pizzaCost) {
         // Adding value to <li>
         // Adding aria-checked to <li>
     const selectedTopping = document.querySelectorAll('.topping')
-    console.log(typeof selectedTopping.value)
     selectedTopping.forEach(topping => {
-        topping.onclick = () => checkout(reviewName, reviewTel, pizzaType, pizzaCost, PIZZA_TOPPINGS[topping.value])
+        topping.onclick = () => checkout(reviewName, reviewTel, pizzaType, pizzaCost, topping.dataset.value, PIZZA_TOPPINGS[topping.dataset.value])
         // Add a CONST with toppings and compare the value of <li> against the CONST object.
         // Maybe create a set of <button> instead of <li> objects.
     })
