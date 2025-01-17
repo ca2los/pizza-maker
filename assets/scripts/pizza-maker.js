@@ -59,6 +59,7 @@ function billing(reviewName, reviewTel, pizzaType, pizzaCost, toppingType, toppi
         document.getElementById('pm-ticket').appendChild(HTML_ITEMS[8]).textContent = `Topping: ${toppingType}`
         document.getElementById('pm-ticket').appendChild(HTML_ITEMS[9]).textContent = `USD $${toppingCost}`
     }
+    // Add the total billing
 }
 
 function pizzaToppings(reviewName, reviewTel, pizzaType, pizzaCost) {
@@ -87,6 +88,7 @@ function pizzaToppings(reviewName, reviewTel, pizzaType, pizzaCost) {
         topping.onclick = () => checkout(reviewName, reviewTel, pizzaType, pizzaCost, topping.dataset.value, PIZZA_TOPPINGS[topping.dataset.value])
         // Add a CONST with toppings and compare the value of <li> against the CONST object.
         // Maybe create a set of <button> instead of <li> objects.
+
     })
 }
 
