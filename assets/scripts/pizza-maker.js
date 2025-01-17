@@ -84,7 +84,7 @@ function pizzaToppings(reviewName, reviewTel, pizzaType, pizzaCost) {
     const selectedTopping = document.querySelectorAll('.topping')
     console.log(typeof selectedTopping.value)
     selectedTopping.forEach(topping => {
-        topping.onclick = () => checkout(reviewName, reviewTel, pizzaType, pizzaCost, PIZZA_TOPPINGS[selectedTopping.value])
+        topping.onclick = () => checkout(reviewName, reviewTel, pizzaType, pizzaCost, PIZZA_TOPPINGS[topping.value])
         // Add a CONST with toppings and compare the value of <li> against the CONST object.
         // Maybe create a set of <button> instead of <li> objects.
     })
