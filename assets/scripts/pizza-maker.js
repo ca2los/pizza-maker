@@ -47,7 +47,7 @@ function checkout(reviewName, reviewTel, pizzaType, pizzaCost, toppingType, topp
     billing(reviewName, reviewTel, pizzaType, pizzaCost, toppingType, toppingCost)
 }
 
-function billing(reviewName, reviewTel, pizzaType, pizzaCost, toppingType) {
+function billing(reviewName, reviewTel, pizzaType, pizzaCost, toppingType, toppingCost) {
     document.getElementById('pm-ticket').appendChild(HTML_ITEMS[2]).textContent = 'Billing'
     document.getElementById('pm-ticket').appendChild(HTML_ITEMS[0]).textContent = reviewName
     document.getElementById('pm-ticket').appendChild(HTML_ITEMS[1]).textContent = reviewTel
@@ -55,8 +55,9 @@ function billing(reviewName, reviewTel, pizzaType, pizzaCost, toppingType) {
         document.getElementById('pm-ticket').appendChild(HTML_ITEMS[3]).textContent = `Pizza: ${pizzaType}`
         document.getElementById('pm-ticket').appendChild(HTML_ITEMS[6]).textContent = `USD $${pizzaCost}`
     }
-    if (toppingType !== undefined) {
-        document.getElementById('pm-ticket').appendChild(HTML_ITEMS[7]).textContent = `Topping: ${pizzaType}`
+    if (toppingType !== undefined || toppingCost !== undefined) {
+        document.getElementById('pm-ticket').appendChild(HTML_ITEMS[8]).textContent = `Topping: ${toppingType}`
+        document.getElementById('pm-ticket').appendChild(HTML_ITEMS[9]).textContent = `USD $${toppingCost}`
     }
 }
 
