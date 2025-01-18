@@ -84,12 +84,11 @@ function pizzaToppings(reviewName, reviewTel, pizzaType, pizzaCost) {
         // Adding value to <li>
         // Adding aria-checked to <li>
     const selectedTopping = document.querySelectorAll('.topping')
+    const orderPizza = document.querySelector('.btn-wrapper')
     selectedTopping.forEach(topping => {
         topping.onclick = () => checkout(reviewName, reviewTel, pizzaType, pizzaCost, topping.dataset.value, PIZZA_TOPPINGS[topping.dataset.value])
-        // Add a CONST with toppings and compare the value of <li> against the CONST object.
-        // Maybe create a set of <button> instead of <li> objects.
-
     })
+    orderPizza.onclick = () => checkout(reviewName, reviewTel, pizzaType, pizzaCost)
 }
 
 function pizzaMenu(reviewName, reviewTel) {
