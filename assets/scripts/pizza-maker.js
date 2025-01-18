@@ -63,6 +63,7 @@ function billing(reviewName, reviewTel, pizzaType, pizzaCost, toppingType, toppi
         document.getElementById('pm-ticket').appendChild(HTML_ITEMS[9]).textContent = `USD $${toppingCost}`
         document.getElementById('pm-ticket').appendChild(HTML_ITEMS[7]).textContent = `Total is USD $${pizzaCost + toppingCost}`
     }
+    // Improve the Total styles
 }
 
 function pizzaToppings(reviewName, reviewTel, pizzaType, pizzaCost) {
@@ -144,4 +145,5 @@ function pizzaCustomer() {
     } else {
         checkUsername(nameSubmit, phoneSubmit);
     }
+    // Consider a regex condition for input objects
 }
