@@ -40,7 +40,9 @@ function checkout(reviewName, reviewTel, pizzaType, pizzaCost, toppingType, topp
     console.log('Stage #4 ->', 'Username:', reviewName, '/ Contact:', reviewTel, '/ Pizza:', pizzaType, '/ Cost:', pizzaCost, '/ Topping:', toppingType, '/ Cost:', toppingCost)
 
     // Hide & Modify
-    document.querySelector('.pizza-toppings').style.display = 'none';
+    document.querySelector('.pizza-toppings').style.display = 'none'
+    document.querySelector('.btn-wrapper').children[0].textContent = 'Try again'
+    document.querySelector('.btn-wrapper').children[1].style.display = 'none'
     document.getElementById('pm-menu').children[0].textContent = 'Your order is in process'
 
     // Pass Data (Billing)
@@ -74,17 +76,16 @@ function pizzaToppings(reviewName, reviewTel, pizzaType, pizzaCost) {
     // Pass Data (Billing)
     billing(reviewName, reviewTel, pizzaType, pizzaCost)
 
-    // On Click
-
-
     // Adding Toppings
         // Add styles when input has "checked" value
         // Remove styles when input has not "checked" value
         // Pass data values to billing() after onClick() "Order" button.
         // Adding value to <li>
         // Adding aria-checked to <li>
+
+    // On Click
     const selectedTopping = document.querySelectorAll('.topping')
-    const orderPizza = document.querySelector('.btn-wrapper')
+    const orderPizza = document.querySelector('.btn-wrapper').children[1]
     selectedTopping.forEach(topping => {
         topping.onclick = () => checkout(reviewName, reviewTel, pizzaType, pizzaCost, topping.dataset.value, PIZZA_TOPPINGS[topping.dataset.value])
     })
