@@ -160,6 +160,9 @@
 }
 .pizza-maker section#pm-menu .pm-menu-wrapper .ticket-preview .ticket-preview-wrapper p:last-child {
   color: var(--color-white);
+  border-top: 1px solid var(--color-softy);
+  margin-top: 10px;
+  padding-top: 10px;
   text-transform: uppercase;
 }
 .pizza-maker section#pm-menu .pm-menu-wrapper .pizza-options {
