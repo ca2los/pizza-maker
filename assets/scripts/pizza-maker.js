@@ -61,7 +61,7 @@ function billing(reviewName, reviewTel, pizzaType, pizzaCost, toppingType, toppi
     if (toppingType !== undefined || toppingCost !== undefined) {
         document.getElementById('pm-ticket').appendChild(HTML_ITEMS[8]).textContent = `Topping: ${toppingType}`
         document.getElementById('pm-ticket').appendChild(HTML_ITEMS[9]).textContent = `USD $${toppingCost}`
-        document.getElementById('pm-ticket').appendChild(HTML_ITEMS[7]).textContent = `Total is USD $${pizzaCost + toppingCost}`
+        document.getElementById('pm-ticket').appendChild(HTML_ITEMS[7]).textContent = `Total is USD $${(pizzaCost + toppingCost).toFixed(2)}`
     }
     // Improve the Total styles
 }
